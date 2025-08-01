@@ -41,10 +41,23 @@
 
     <section class="downloads">
       <ul>
+        <input type="text" id="searchInput" placeholder="Пошук пісні..." class="search-box">
         <li><a href="files/kalyna.pdf" download>Ой у лузі червона калина (PDF)</a></li>
         <li><a href="files/nesegalya.mp3" download>Несе Галя воду (MP3)</a></li>
         <li><a href="files/sopilka.pdf" download>Грай, сопілочко (PDF)</a></li>
       </ul>
+      <script>
+  const searchInput = document.getElementById('searchInput');
+  const listItems = document.querySelectorAll('.downloads ul li');
+
+  searchInput.addEventListener('input', function () {
+    const searchValue = this.value.toLowerCase();
+    listItems.forEach(item => {
+      const text = item.textContent.toLowerCase();
+      item.style.display = text.includes(searchValue) ? 'block' : 'none';
+    });
+  });
+</script>
     </section>
   </main>
 
