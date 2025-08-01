@@ -1,55 +1,96 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Автори | Музичний архів</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Автори | Народна Музика</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <div class="nav-container">
+    <div class="container nav-container">
       <div class="logo">Народна Музика</div>
       <nav>
-        <ul>
+        <ul class="nav-links">
           <li><a href="index.html">Головна</a></li>
           <li><a href="folk.html">Народні пісні</a></li>
           <li><a href="authors.html">Автори</a></li>
           <li><a href="spiritual.html">Духовні пісні</a></li>
           <li><a href="contacts.html">Контакти</a></li>
           <li><a href="shop.html">Магазин</a></li>
+          <li><a href="#" onclick="toggleModal()">Увійти</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1611605698335-3b29c2eaef1a');">
+  <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1558114965-c8e211b1c2ef');">
     <div class="hero-text">
       <h1>Автори</h1>
-      <p>Композитори та аранжувальники, що творили й творять українську музику</p>
+      <p>Композитори та митці, що формували українську музику</p>
     </div>
   </section>
 
-  <main>
+  <main class="container fade-in">
     <section>
-      <h2>Відомі імена</h2>
-      <p>Інформація про авторів, чиї твори представлені на нашому сайті. Ви можете завантажити деякі з їхніх робіт.</p>
-    </section>
-
-    <section class="downloads">
-      <ul>
-        <li><a href="files/leontovych.pdf" download>Микола Леонтович — Щедрик (PDF)</a></li>
-        <li><a href="files/lysenko.pdf" download>Микола Лисенко — Заповіт (PDF)</a></li>
-        <li><a href="files/silvestrov.mp3" download>Валентин Сильвестров — Мелодія (MP3)</a></li>
+      <h2>Видатні імена</h2>
+      <input type="text" id="searchInput" placeholder="Пошук автора або твору..." class="search-box">
+      <ul id="downloadList">
+        <li><a href="files/leontovych_shchedryk.pdf" download>Микола Леонтович — Щедрик (PDF)</a></li>
+        <li><a href="files/lysenko_zapovit.pdf" download>Микола Лисенко — Заповіт (PDF)</a></li>
+        <li><a href="files/silvestrov_melody.mp3" download>Валентин Сильвестров — Мелодія (MP3)</a></li>
       </ul>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 Народна музика України | Збережемо традицію разом</p>
+    <div class="container">
+      <p>© 2025 Народна музика України | Всі права захищено</p>
+    </div>
   </footer>
+
+  <!-- Модальне вікно входу -->
+  <div class="modal" id="loginModal">
+    <div class="modal-content">
+      <span class="close" onclick="toggleModal()">&times;</span>
+      <h2>Увійти</h2>
+      <form id="loginForm">
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Пароль" required>
+        <button type="submit">Увійти</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('searchInput')?.addEventListener('input', function () {
+      const search = this.value.toLowerCase();
+      document.querySelectorAll('#downloadList li').forEach(item => {
+        const text = item.textContent.toLowerCase();
+        item.style.display = text.includes(search) ? 'block' : 'none';
+      });
+    });
+
+    function toggleModal() {
+      const modal = document.getElementById('loginModal');
+      modal.style.display = (modal.style.display === 'flex') ? 'none' : 'flex';
+    }
+
+    window.onclick = function (e) {
+      const modal = document.getElementById('loginModal');
+      if (e.target === modal) modal.style.display = 'none';
+    }
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
