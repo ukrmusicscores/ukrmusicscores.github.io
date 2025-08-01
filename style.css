@@ -1,104 +1,131 @@
-/* Загальні стилі */
+/* Обнулення */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* Базові стилі */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to bottom, #ffffff, #f0f4f8);
-  color: #333;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: #f5f7fa;
+  color: #2c3e50;
   line-height: 1.6;
 }
 
-/* Навігаційне меню */
+/* Навігація */
 header {
-  background: #003366;
+  background: #2c3e50;
   padding: 1rem 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
-  z-index: 1000;
-}
-
-nav {
-  max-width: 1000px;
-  margin: auto;
+  z-index: 999;
 }
 
 .menu {
   display: flex;
   justify-content: center;
-  list-style: none;
   flex-wrap: wrap;
+  list-style: none;
 }
 
 .menu li {
-  margin: 0 20px;
+  margin: 0 12px;
 }
 
 .menu a {
-  color: #fff;
+  color: #ecf0f1;
   text-decoration: none;
   font-weight: 600;
-  padding: 6px 10px;
-  border-radius: 6px;
-  transition: background 0.3s;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
 }
 
 .menu a:hover {
-  background: #005999;
+  background-color: #34495e;
 }
 
 /* Основна частина */
 main {
-  max-width: 900px;
+  max-width: 960px;
   margin: 2rem auto;
-  padding: 0 1rem;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
   padding: 2rem;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 h1 {
-  color: #003366;
+  color: #2c3e50;
+  font-size: 2.2rem;
   margin-bottom: 1rem;
+}
+
+h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #34495e;
+}
+
+p {
+  margin-bottom: 1.5rem;
 }
 
 .downloads ul {
   list-style: none;
-  padding-left: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
 }
 
 .downloads li {
-  margin: 10px 0;
+  background: #f1f6fa;
+  padding: 1rem;
+  border-radius: 10px;
+  transition: transform 0.2s;
+}
+
+.downloads li:hover {
+  transform: translateY(-4px);
 }
 
 .downloads a {
-  color: #005999;
+  display: block;
   text-decoration: none;
-  font-weight: 500;
-  background: #eef4fb;
-  padding: 8px 12px;
-  border-radius: 6px;
-  display: inline-block;
-  transition: all 0.3s;
+  color: #2980b9;
+  font-weight: 600;
 }
 
 .downloads a:hover {
-  background: #dce9f6;
   text-decoration: underline;
 }
 
 /* Footer */
 footer {
   text-align: center;
-  padding: 1rem;
-  background: #eee;
-  margin-top: 2rem;
-  font-size: 0.9em;
+  padding: 1.5rem;
+  margin-top: 3rem;
+  background: #ecf0f1;
   color: #555;
+  font-size: 0.9rem;
   border-top: 1px solid #ddd;
+}
+
+/* Мобільна адаптація */
+@media (max-width: 600px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu li {
+    margin: 8px 0;
+  }
+
+  main {
+    padding: 1.2rem;
+  }
 }
