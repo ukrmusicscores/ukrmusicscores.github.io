@@ -1,206 +1,104 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Головна | Музичний архів</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(to bottom, #f9fafc, #eaeff5);
-      color: #1c1e21;
-      line-height: 1.7;
-    }
-
-    header {
-      background: #0b1f3a;
-      color: #fff;
-      padding: 1rem 0;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
-    }
-
-    .nav-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 1rem;
-    }
-
-    .logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.8rem;
-      font-weight: 600;
-      color: #ffffff;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    nav a {
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #a2d2ff;
-    }
-
-    .hero {
-      position: relative;
-      height: 480px;
-      background: url('https://images.unsplash.com/photo-1508973371308-47c1b82f1c8b') center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .hero-text {
-      background: rgba(11, 31, 58, 0.7);
-      color: #ffffff;
-      padding: 2rem 3rem;
-      border-radius: 12px;
-      text-align: center;
-    }
-
-    .hero-text h1 {
-      font-size: 2.8rem;
-      font-family: 'Playfair Display', serif;
-      margin-bottom: 1rem;
-    }
-
-    .hero-text p {
-      font-size: 1.2rem;
-    }
-
-    main {
-      max-width: 1000px;
-      margin: 3rem auto;
-      padding: 0 1rem;
-    }
-
-    section {
-      margin-bottom: 3rem;
-    }
-
-    h2 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-      color: #0b1f3a;
-    }
-
-    p {
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
-    }
-
-    .downloads ul {
-      list-style: none;
-      padding: 0;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .downloads li {
-      background: #ffffff;
-      border-radius: 10px;
-      padding: 1rem;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
-      transition: transform 0.3s;
-    }
-
-    .downloads li:hover {
-      transform: translateY(-5px);
-    }
-
-    .downloads a {
-      color: #0b1f3a;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    footer {
-      background: #f1f5f9;
-      text-align: center;
-      padding: 1.5rem;
-      font-size: 0.9rem;
-      color: #555;
-    }
-
-    @media (max-width: 768px) {
-      .hero-text h1 {
-        font-size: 2rem;
-      }
-
-      nav ul {
-        flex-direction: column;
-        gap: 0.5rem;
-        margin-top: 1rem;
-      }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Головна | Народна Музика</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <div class="nav-container">
+    <div class="container nav-container">
       <div class="logo">Народна Музика</div>
       <nav>
-        <ul>
+        <ul class="nav-links">
           <li><a href="index.html">Головна</a></li>
           <li><a href="folk.html">Народні пісні</a></li>
           <li><a href="authors.html">Автори</a></li>
           <li><a href="spiritual.html">Духовні пісні</a></li>
           <li><a href="contacts.html">Контакти</a></li>
           <li><a href="shop.html">Магазин</a></li>
+          <li><a href="#" onclick="toggleModal()">Увійти</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <section class="hero">
+  <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1487253096619-5f28286db8d8');">
     <div class="hero-text">
-      <h1>Музична спадщина України</h1>
-      <p>Найкращі народні, авторські й духовні пісні для вивчення та завантаження</p>
+      <h1>Зберігаємо та поширюємо українську музику</h1>
+      <p>Ноти, записи, духовна спадщина — усе в одному місці</p>
     </div>
   </section>
 
-  <main>
+  <main class="container fade-in">
     <section>
-      <h2>Про сайт</h2>
-      <p>Ми збираємо, зберігаємо та поширюємо унікальні музичні твори української культури. Тут ви знайдете ноти, записи та інформацію про композиторів.</p>
+      <h2>Ласкаво просимо</h2>
+      <p>Цей сайт створено для збереження української музичної спадщини. Ви знайдете тут нотні архіви, записи, авторські твори та багато іншого.</p>
     </section>
 
     <section class="downloads">
       <h2>Популярні завантаження</h2>
-      <ul>
-        <li><a href="files/song1.pdf" download>Ой у лузі червона калина (PDF)</a></li>
-        <li><a href="files/song2.mp3" download>Несе Галя воду (MP3)</a></li>
+      <input type="text" id="searchInput" placeholder="Пошук пісні..." class="search-box">
+      <ul id="downloadList">
+        <li><a href="files/kalyna.pdf" download>Ой у лузі червона калина (PDF)</a></li>
+        <li><a href="files/nesegalya.mp3" download>Несе Галя воду (MP3)</a></li>
         <li><a href="files/spiritual1.pdf" download>Отче наш (PDF)</a></li>
       </ul>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 Народна музика України | Розроблено з любов’ю до традиції</p>
+    <div class="container">
+      <p>© 2025 Народна музика України | Всі права захищено</p>
+    </div>
   </footer>
+
+  <!-- Modal реєстрації -->
+  <div class="modal" id="loginModal">
+    <div class="modal-content">
+      <span class="close" onclick="toggleModal()">&times;</span>
+      <h2>Увійти</h2>
+      <form id="loginForm">
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Пароль" required>
+        <button type="submit">Увійти</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Пошук
+    document.getElementById('searchInput')?.addEventListener('input', function () {
+      const search = this.value.toLowerCase();
+      document.querySelectorAll('#downloadList li').forEach(item => {
+        const text = item.textContent.toLowerCase();
+        item.style.display = text.includes(search) ? 'block' : 'none';
+      });
+    });
+
+    // Модальне вікно
+    function toggleModal() {
+      const modal = document.getElementById('loginModal');
+      modal.style.display = (modal.style.display === 'flex') ? 'none' : 'flex';
+    }
+
+    window.onclick = function (e) {
+      const modal = document.getElementById('loginModal');
+      if (e.target === modal) modal.style.display = 'none';
+    }
+
+    // Анімація при прокрутці
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
