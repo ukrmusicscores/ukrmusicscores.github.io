@@ -1,37 +1,55 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Народні пісні</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Народні пісні | Музичний архів</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <nav>
-      <ul class="menu">
-        <li><a href="index.html">Головна</a></li>
-        <li><a href="folk.html">Народні пісні</a></li>
-        <li><a href="authors.html">Автори</a></li>
-        <li><a href="spiritual.html">Духовні пісні</a></li>
-        <li><a href="contacts.html">Контакти</a></li>
-        <li><a href="shop.html">Магазин</a></li>
-      </ul>
-    </nav>
+    <div class="nav-container">
+      <div class="logo">Народна Музика</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="folk.html">Народні пісні</a></li>
+          <li><a href="authors.html">Автори</a></li>
+          <li><a href="spiritual.html">Духовні пісні</a></li>
+          <li><a href="contacts.html">Контакти</a></li>
+          <li><a href="shop.html">Магазин</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <h1>Народні пісні</h1>
-    <p>Тут буде перелік українських народних пісень для скачування:</p>
+  <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1614851099511-74f7d4d712e6');">
+    <div class="hero-text">
+      <h1>Народні пісні</h1>
+      <p>Скарбниця української автентичної музики</p>
+    </div>
+  </section>
 
-    <ul class="downloads">
-      <li><a href="files/narodna1.pdf" download>Ой у лузі червона калина (PDF)</a></li>
-      <li><a href="files/narodna2.mp3" download>Несе Галя воду (MP3)</a></li>
-    </ul>
+  <main>
+    <section>
+      <h2>Оберіть пісню для перегляду або завантаження</h2>
+      <p>Ноти та записи українських народних пісень, які зберігають живу традицію поколінь.</p>
+    </section>
+
+    <section class="downloads">
+      <ul>
+        <li><a href="files/kalyna.pdf" download>Ой у лузі червона калина (PDF)</a></li>
+        <li><a href="files/nesegalya.mp3" download>Несе Галя воду (MP3)</a></li>
+        <li><a href="files/sopilka.pdf" download>Грай, сопілочко (PDF)</a></li>
+      </ul>
+    </section>
   </main>
 
   <footer>
-    <p>© 2025 Мій сайт</p>
+    <p>© 2025 Народна музика України | Збережемо традицію разом</p>
   </footer>
 </body>
 </html>
