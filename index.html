@@ -2,39 +2,56 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Головна | Нотні матеріали</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Головна | Народна музика</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
+  <!-- Шапка з логотипом та навігацією -->
   <header>
-    <nav>
-      <ul class="menu">
-        <li><a href="index.html">Головна</a></li>
-        <li><a href="folk.html">Народні пісні</a></li>
-        <li><a href="authors.html">Автори</a></li>
-        <li><a href="spiritual.html">Духовні пісні</a></li>
-        <li><a href="contacts.html">Контакти</a></li>
-        <li><a href="shop.html">Магазин</a></li>
-      </ul>
-    </nav>
+    <div class="topbar">
+      <div class="logo">🎵 Народна музика</div>
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="folk.html">Народні пісні</a></li>
+          <li><a href="authors.html">Автори</a></li>
+          <li><a href="spiritual.html">Духовні пісні</a></li>
+          <li><a href="contacts.html">Контакти</a></li>
+          <li><a href="shop.html">Магазин</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
+  <!-- Великий банер -->
+  <section class="banner">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Traditional_Ukrainian_Music.jpg/1280px-Traditional_Ukrainian_Music.jpg" alt="Банер народної музики">
+    <div class="banner-text">
+      <h1>Українська народна музика</h1>
+      <p>Архів пісень, авторських творів та духовної спадщини</p>
+    </div>
+  </section>
+
+  <!-- Основна частина -->
   <main>
-    <h1>Ласкаво просимо!</h1>
-    <p>Тут ви зможете завантажити музичні матеріали.</p>
+    <section class="intro">
+      <h2>Ласкаво просимо!</h2>
+      <p>Цей сайт створено для збереження та поширення української музичної культури. Завантажуйте файли, знайомтесь з авторами та підтримуйте розвиток!</p>
+    </section>
 
     <section class="downloads">
-      <h2>Файли для завантаження:</h2>
+      <h2>Популярні завантаження:</h2>
       <ul>
-        <li><a href="files/song1.pdf" download>Пісня 1 (PDF)</a></li>
-        <li><a href="files/song2.mp3" download>Пісня 2 (MP3)</a></li>
+        <li><a href="files/song1.pdf" download>Ой у лузі червона калина (PDF)</a></li>
+        <li><a href="files/song2.mp3" download>Пісня про рушник (MP3)</a></li>
       </ul>
     </section>
   </main>
 
+  <!-- Підвал -->
   <footer>
-    <p>© 2025 Serhii Samuilov</p>
+    <p>© 2025 Народна музика України</p>
   </footer>
 </body>
 </html>
