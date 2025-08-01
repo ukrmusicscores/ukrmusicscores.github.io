@@ -1,104 +1,52 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Головна | Народна Музика</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Головна | Музичний архів</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <div class="container nav-container">
-      <div class="logo">Народна Музика</div>
+    <div class="nav-container">
+      <div class="logo">Музичний архів</div>
       <nav>
-        <ul class="nav-links">
+        <ul>
           <li><a href="index.html">Головна</a></li>
           <li><a href="folk.html">Народні пісні</a></li>
           <li><a href="authors.html">Автори</a></li>
           <li><a href="spiritual.html">Духовні пісні</a></li>
           <li><a href="contacts.html">Контакти</a></li>
           <li><a href="shop.html">Магазин</a></li>
-          <li><a href="#" onclick="toggleModal()">Увійти</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1487253096619-5f28286db8d8');">
+  <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f');">
     <div class="hero-text">
-      <h1>Зберігаємо та поширюємо українську музику</h1>
-      <p>Ноти, записи, духовна спадщина — усе в одному місці</p>
+      <h1>Магазин</h1>
+      <p>Підтримайте проект — придбайте наші збірки, ноти, аудіо або подарункові товари</p>
     </div>
   </section>
 
-  <main class="container fade-in">
+  <main>
     <section>
-      <h2>Ласкаво просимо</h2>
-      <p>Цей сайт створено для збереження української музичної спадщини. Ви знайдете тут нотні архіви, записи, авторські твори та багато іншого.</p>
-    </section>
-
-    <section class="downloads">
-      <h2>Популярні завантаження</h2>
-      <input type="text" id="searchInput" placeholder="Пошук пісні..." class="search-box">
-      <ul id="downloadList">
-        <li><a href="files/kalyna.pdf" download>Ой у лузі червона калина (PDF)</a></li>
-        <li><a href="files/nesegalya.mp3" download>Несе Галя воду (MP3)</a></li>
-        <li><a href="files/spiritual1.pdf" download>Отче наш (PDF)</a></li>
+      <h2>Товари</h2>
+      <p>Тут буде перелік доступних видань, записів та продуктів. Ви можете підтримати проєкт, придбавши матеріали онлайн.</p>
+      <ul>
+        <li><strong>Збірка "Українські колядки" (PDF) — 80 грн</strong></li>
+        <li><strong>MP3 альбом "Голос предків" — 100 грн</strong></li>
+        <li><strong>Футболка "Співай українське" — 250 грн</strong></li>
       </ul>
     </section>
   </main>
 
   <footer>
-    <div class="container">
-      <p>© 2025 Народна музика України | Всі права захищено</p>
-    </div>
+    <p>© 2025 Народна музика України | Збережемо традицію разом</p>
   </footer>
-
-  <!-- Modal реєстрації -->
-  <div class="modal" id="loginModal">
-    <div class="modal-content">
-      <span class="close" onclick="toggleModal()">&times;</span>
-      <h2>Увійти</h2>
-      <form id="loginForm">
-        <input type="email" placeholder="Email" required>
-        <input type="password" placeholder="Пароль" required>
-        <button type="submit">Увійти</button>
-      </form>
-    </div>
-  </div>
-
-  <script>
-    // Пошук
-    document.getElementById('searchInput')?.addEventListener('input', function () {
-      const search = this.value.toLowerCase();
-      document.querySelectorAll('#downloadList li').forEach(item => {
-        const text = item.textContent.toLowerCase();
-        item.style.display = text.includes(search) ? 'block' : 'none';
-      });
-    });
-
-    // Модальне вікно
-    function toggleModal() {
-      const modal = document.getElementById('loginModal');
-      modal.style.display = (modal.style.display === 'flex') ? 'none' : 'flex';
-    }
-
-    window.onclick = function (e) {
-      const modal = document.getElementById('loginModal');
-      if (e.target === modal) modal.style.display = 'none';
-    }
-
-    // Анімація при прокрутці
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    });
-
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-  </script>
 </body>
 </html>
