@@ -155,6 +155,22 @@ footer {
   color: #555;
 }
 
+.search-box {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border 0.3s;
+}
+
+.search-box:focus {
+  outline: none;
+  border-color: #0b1f3a;
+  box-shadow: 0 0 0 2px rgba(11, 31, 58, 0.2);
+}
+
 /* === АДАПТИВ === */
 @media (max-width: 768px) {
   .hero-text h1 {
