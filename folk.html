@@ -1,68 +1,96 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Народні пісні | Музичний архів</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Народні пісні | Народна Музика</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <div class="nav-container">
+    <div class="container nav-container">
       <div class="logo">Народна Музика</div>
       <nav>
-        <ul>
+        <ul class="nav-links">
           <li><a href="index.html">Головна</a></li>
           <li><a href="folk.html">Народні пісні</a></li>
           <li><a href="authors.html">Автори</a></li>
           <li><a href="spiritual.html">Духовні пісні</a></li>
           <li><a href="contacts.html">Контакти</a></li>
           <li><a href="shop.html">Магазин</a></li>
+          <li><a href="#" onclick="toggleModal()">Увійти</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1614851099511-74f7d4d712e6');">
+  <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1536745511564-a5fa6e596e4e');">
     <div class="hero-text">
       <h1>Народні пісні</h1>
-      <p>Скарбниця української автентичної музики</p>
+      <p>Справжній голос народу — українські пісні, що звучали століттями</p>
     </div>
   </section>
 
-  <main>
+  <main class="container fade-in">
     <section>
-      <h2>Оберіть пісню для перегляду або завантаження</h2>
-      <p>Ноти та записи українських народних пісень, які зберігають живу традицію поколінь.</p>
-    </section>
-
-    <section class="downloads">
-      <ul>
-        <input type="text" id="searchInput" placeholder="Пошук пісні..." class="search-box">
-        <li><a href="files/kalyna.pdf" download>Ой у лузі червона калина (PDF)</a></li>
+      <h2>Завантажити пісні</h2>
+      <input type="text" id="searchInput" placeholder="Пошук пісні..." class="search-box">
+      <ul id="downloadList">
+        <li><a href="files/oy-u-luzi.pdf" download>Ой у лузі червона калина (PDF)</a></li>
         <li><a href="files/nesegalya.mp3" download>Несе Галя воду (MP3)</a></li>
         <li><a href="files/sopilka.pdf" download>Грай, сопілочко (PDF)</a></li>
       </ul>
-      <script>
-  const searchInput = document.getElementById('searchInput');
-  const listItems = document.querySelectorAll('.downloads ul li');
-
-  searchInput.addEventListener('input', function () {
-    const searchValue = this.value.toLowerCase();
-    listItems.forEach(item => {
-      const text = item.textContent.toLowerCase();
-      item.style.display = text.includes(searchValue) ? 'block' : 'none';
-    });
-  });
-</script>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 Народна музика України | Збережемо традицію разом</p>
+    <div class="container">
+      <p>© 2025 Народна музика України | Всі права захищено</p>
+    </div>
   </footer>
+
+  <!-- Модальне вікно -->
+  <div class="modal" id="loginModal">
+    <div class="modal-content">
+      <span class="close" onclick="toggleModal()">&times;</span>
+      <h2>Увійти</h2>
+      <form id="loginForm">
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Пароль" required>
+        <button type="submit">Увійти</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('searchInput')?.addEventListener('input', function () {
+      const search = this.value.toLowerCase();
+      document.querySelectorAll('#downloadList li').forEach(item => {
+        const text = item.textContent.toLowerCase();
+        item.style.display = text.includes(search) ? 'block' : 'none';
+      });
+    });
+
+    function toggleModal() {
+      const modal = document.getElementById('loginModal');
+      modal.style.display = (modal.style.display === 'flex') ? 'none' : 'flex';
+    }
+
+    window.onclick = function (e) {
+      const modal = document.getElementById('loginModal');
+      if (e.target === modal) modal.style.display = 'none';
+    }
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
