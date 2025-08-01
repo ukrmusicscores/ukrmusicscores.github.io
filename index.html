@@ -3,38 +3,204 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Головна | Мій сайт</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Головна | Музичний архів</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://promocionmusical.es/wp-content/uploads/2018/12/tipos-de-partituras.jpg" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom, #f9fafc, #eaeff5);
+      color: #1c1e21;
+      line-height: 1.7;
+    }
+
+    header {
+      background: #0b1f3a;
+      color: #fff;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1rem;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #a2d2ff;
+    }
+
+    .hero {
+      position: relative;
+      height: 480px;
+      background: url('https://images.unsplash.com/photo-1508973371308-47c1b82f1c8b') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-text {
+      background: rgba(11, 31, 58, 0.7);
+      color: #ffffff;
+      padding: 2rem 3rem;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .hero-text h1 {
+      font-size: 2.8rem;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 1rem;
+    }
+
+    .hero-text p {
+      font-size: 1.2rem;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #0b1f3a;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    .downloads ul {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .downloads li {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
+      transition: transform 0.3s;
+    }
+
+    .downloads li:hover {
+      transform: translateY(-5px);
+    }
+
+    .downloads a {
+      color: #0b1f3a;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer {
+      background: #f1f5f9;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    @media (max-width: 768px) {
+      .hero-text h1 {
+        font-size: 2rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <nav>
-      <ul class="menu">
-        <li><a href="index.html">Головна</a></li>
-        <li><a href="#">Народні пісні</a></li>
-        <li><a href="#">Автори</a></li>
-        <li><a href="#">Духовні пісні</a></li>
-        <li><a href="#">Контакти</a></li>
-        <li><a href="#">Магазин</a></li>
-      </ul>
-    </nav>
+    <div class="nav-container">
+      <div class="logo">Народна Музика</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Головна</a></li>
+          <li><a href="folk.html">Народні пісні</a></li>
+          <li><a href="authors.html">Автори</a></li>
+          <li><a href="spiritual.html">Духовні пісні</a></li>
+          <li><a href="contacts.html">Контакти</a></li>
+          <li><a href="shop.html">Магазин</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Музична спадщина України</h1>
+      <p>Найкращі народні, авторські й духовні пісні для вивчення та завантаження</p>
+    </div>
+  </section>
+
   <main>
-    <h1>Ласкаво просимо!</h1>
-    <p>Тут ви зможете завантажити музичні файли.</p>
+    <section>
+      <h2>Про сайт</h2>
+      <p>Ми збираємо, зберігаємо та поширюємо унікальні музичні твори української культури. Тут ви знайдете ноти, записи та інформацію про композиторів.</p>
+    </section>
 
     <section class="downloads">
-      <h2>Файли для завантаження:</h2>
+      <h2>Популярні завантаження</h2>
       <ul>
-        <li><a href="files/song1.pdf" download>Пісня 1 (PDF)</a></li>
-        <li><a href="files/song2.mp3" download>Пісня 2 (MP3)</a></li>
+        <li><a href="files/song1.pdf" download>Ой у лузі червона калина (PDF)</a></li>
+        <li><a href="files/song2.mp3" download>Несе Галя воду (MP3)</a></li>
+        <li><a href="files/spiritual1.pdf" download>Отче наш (PDF)</a></li>
       </ul>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 Мій сайт</p>
+    <p>© 2025 Народна музика України | Розроблено з любов’ю до традиції</p>
   </footer>
 </body>
 </html>

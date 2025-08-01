@@ -1,4 +1,3 @@
-/* Загальні стилі */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,65 +5,103 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to bottom, #ffffff, #f0f4f8);
-  color: #333;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f6f9;
+  color: #2c3e50;
   line-height: 1.6;
 }
 
-/* Навігаційне меню */
+/* Шапка */
 header {
-  background: #003366;
-  padding: 1rem 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  background: #16243d;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-nav {
-  max-width: 1000px;
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
   margin: auto;
+  padding: 1rem;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #ffffff;
 }
 
 .menu {
-  display: flex;
-  justify-content: center;
   list-style: none;
-  flex-wrap: wrap;
+  display: flex;
+  gap: 20px;
 }
 
-.menu li {
-  margin: 0 20px;
-}
-
-.menu a {
-  color: #fff;
+.menu li a {
   text-decoration: none;
-  font-weight: 600;
+  color: #ffffff;
+  font-weight: 500;
   padding: 6px 10px;
   border-radius: 6px;
   transition: background 0.3s;
 }
 
-.menu a:hover {
-  background: #005999;
+.menu li a:hover {
+  background: #274067;
 }
 
-/* Основна частина */
+/* Банер */
+.banner {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+.banner-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.banner-text p {
+  font-size: 1.2rem;
+}
+
+/* Основний контент */
 main {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 2rem auto;
   padding: 0 1rem;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
   padding: 2rem;
 }
 
-h1 {
-  color: #003366;
+h2 {
   margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.intro p {
+  font-size: 1.1rem;
 }
 
 .downloads ul {
@@ -73,32 +110,33 @@ h1 {
 }
 
 .downloads li {
+  background: #e8eff7;
   margin: 10px 0;
-}
-
-.downloads a {
-  color: #005999;
-  text-decoration: none;
-  font-weight: 500;
-  background: #eef4fb;
-  padding: 8px 12px;
+  padding: 10px;
   border-radius: 6px;
-  display: inline-block;
   transition: all 0.3s;
 }
 
+.downloads li:hover {
+  background: #d0e1f3;
+}
+
+.downloads a {
+  color: #2c3e50;
+  text-decoration: none;
+  font-weight: 600;
+}
+
 .downloads a:hover {
-  background: #dce9f6;
   text-decoration: underline;
 }
 
-/* Footer */
+/* Підвал */
 footer {
   text-align: center;
   padding: 1rem;
-  background: #eee;
+  background: #ecf0f1;
+  color: #444;
+  font-size: 0.9rem;
   margin-top: 2rem;
-  font-size: 0.9em;
-  color: #555;
-  border-top: 1px solid #ddd;
 }
