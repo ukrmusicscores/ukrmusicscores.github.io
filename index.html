@@ -197,23 +197,21 @@
 </head>
 <body>
 
-<!-- Header -->
-<header class="bg-white shadow-md sticky top-0 z-50">
-  <div class="container mx-auto flex justify-between items-center px-6 py-4">
-    <h1 class="text-3xl font-bold cursor-pointer text-[--primary]" onclick="location.href='index.html'">
-      UkrChoralScores
-    </h1>
-    <nav class="space-x-6 text-lg font-semibold">
-      <a href="index.html" class="nav-link">Головна</a>
-      <a href="folk.html" class="nav-link">Народні пісні</a>
-      <a href="authors.html" class="nav-link">Автори</a>
-      <a href="spiritual.html" class="nav-link">Духовні пісні</a>
-      <a href="other.html" class="nav-link">Інше</a>
-      <a href="news.html" class="nav-link">Новини</a>
-      <a href="shop.html" class="nav-link">Магазин</a>
-    </nav>
-  </div>
-</header>
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center px-6 py-4">
+      <h1 class="text-3xl font-bold cursor-pointer" onclick="location.href='index.html'">UkrChoralScores</h1>
+      <nav class="space-x-6 text-lg">
+        <a href="index.html" class="font-semibold text-primary">Головна</a>
+        <a href="folk.html" class="hover:text-primary">Народні пісні</a>
+        <a href="authors.html" class="hover:text-primary">Автори</a>
+        <a href="spiritual.html" class="hover:text-primary">Духовні пісні</a>
+        <a href="other.html" class="hover:text-primary">Інше</a>
+        <a href="news.html" class="hover:text-primary">Новини</a>
+        <a href="shop.html" class="hover:text-primary">Магазин</a>
+      </nav>
+    </div>
+  </header>
 
   <!-- Hero -->
   <section class="text-center py-16 px-6">
@@ -344,16 +342,6 @@
   function scrollRight() {
     carousel.scrollBy({ left: 160, behavior: 'smooth' });
   }
-</script>
-
-  <script>
-  // Підсвічування активного пункту меню
-  const links = document.querySelectorAll('nav .nav-link');
-  links.forEach(link => {
-    if (link.href === window.location.href) {
-      link.classList.add('text-[--primary]');
-    }
-  });
 </script>
   
 </body>
