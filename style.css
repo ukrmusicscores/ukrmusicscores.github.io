@@ -222,6 +222,17 @@ footer .text-center {
   margin-top: 2rem;
 }
 
+.prose {
+  max-width: 70ch; /* ширина блоку тексту */
+  margin: 0 auto;   /* вирівнювання по центру */
+  padding: 2rem 1.5rem;
+  font-size: 1.125rem; /* трохи більший шрифт */
+  line-height: 1.9;
+  font-family: "Georgia", "Times New Roman", serif;
+  color: #333;
+  text-align: justify;
+}
+
 /* === Адаптивність === */
 @media (max-width: 480px) {
   header nav a {
