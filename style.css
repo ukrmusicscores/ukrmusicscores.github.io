@@ -252,3 +252,14 @@ footer .text-center {
     font-size: 2rem;
   }
 }
+
+.nav-link {
+  color: #222;
+  transition: color 0.3s ease;
+}
+.nav-link:hover {
+  color: var(--primary);
+}
+.nav-link.text-\[--primary\] {
+  font-weight: 700;
+}
