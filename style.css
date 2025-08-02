@@ -1,7 +1,7 @@
 /* Загальні стилі */
 body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  background-color: #f3fdf4; /* світлий фон */
+  background-color: #f7f7f7; /* дуже світло-сірий фон */
   color: #222;
   line-height: 1.6;
   margin: 0;
@@ -10,10 +10,10 @@ body {
 
 /* Кольори */
 :root {
-  --primary: #2e7d32;   /* темно-зелений */
+  --primary: #708238;   /* світло-оливковий */
   --accent: #a5d6a7;    /* світло-зелений */
-  --olive: #708238;     /* оливковий */
-  --bg-light: #f3fdf4;  /* світлий фон */
+  --olive: #708238;     /* світло-оливковий */
+  --bg-light: #f7f7f7;  /* дуже світло-сірий фон */
 }
 
 /* Заголовки */
@@ -23,9 +23,14 @@ h1, h2, h3, h4 {
   margin: 0 0 1rem 0;
 }
 
+/* Для назви сайту (h1) додатково */
+h1 {
+  color: var(--primary);
+}
+
 /* Посилання */
 a {
-  color: var(--primary);
+  color: #222; /* чорний звичайний текст посилань */
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -34,7 +39,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Кнопки */
+/* Кнопки (перегляд, скачати) */
 .btn {
   background-color: var(--primary);
   color: white;
@@ -46,15 +51,18 @@ a:hover {
   border: none;
   display: inline-block;
   text-align: center;
+  /* Зробимо колір тексту світло-оливковим на кнопках */
+  color: white;
+  background-color: var(--primary);
 }
 .btn:hover {
-  background-color: #256029;
+  background-color: #5a6d29;
   transform: translateY(-2px);
 }
 
 /* Хедер */
 header {
-  background: white;
+  background: var(--bg-light);
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
@@ -70,12 +78,16 @@ header nav a {
   margin-left: 1.5rem;
   font-weight: 600;
   font-size: 1rem;
+  color: #222;
+}
+header nav a:hover {
+  color: var(--primary);
 }
 
 /* Секція Hero */
 section.text-center {
   padding: 4rem 1rem;
-  background: white;
+  background: var(--bg-light);
 }
 section.text-center h2 {
   font-size: 3rem;
@@ -137,24 +149,36 @@ section.text-center p {
   flex-direction: column;
   justify-content: space-between;
 }
+
+/* Оновлений стиль назви партитури — світло-оливковий */
 .card-title {
   color: var(--olive);
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
 }
+
+/* Звичайний текст картки - чорний */
 .card p {
-  color: #666;
+  color: #222;
   font-size: 0.9rem;
   margin-bottom: 1rem;
 }
+
+/* Блок кнопок */
 .card .flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
+/* Посилання у картках */
 .card a {
   font-weight: 600;
   font-size: 0.95rem;
+  color: var(--primary);  /* колір посилань — світло-оливковий */
+}
+.card a:hover {
+  color: var(--olive);
 }
 
 /* Секція новин */
@@ -173,7 +197,7 @@ section.bg-[var(--accent)] p.italic {
 
 /* Футер */
 footer {
-  background: white;
+  background: var(--bg-light);
   border-top: 1px solid #ddd;
   padding: 3rem 1rem;
 }
