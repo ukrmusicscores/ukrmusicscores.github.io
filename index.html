@@ -345,6 +345,16 @@
     carousel.scrollBy({ left: 160, behavior: 'smooth' });
   }
 </script>
+
+  <script>
+  // Підсвічування активного пункту меню
+  const links = document.querySelectorAll('nav .nav-link');
+  links.forEach(link => {
+    if (link.href === window.location.href) {
+      link.classList.add('text-[--primary]');
+    }
+  });
+</script>
   
 </body>
 </html>
