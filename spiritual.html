@@ -2,51 +2,89 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Магазин | Музичний архів</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Духовні пісні | UkrChoralScores</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a2e0e6ad5c.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    :root {
+      --primary: #2e7d32;
+      --accent: #a5d6a7;
+      --olive: #708238;
+      --bg-light: #f3fdf4;
+    }
+  </style>
 </head>
-<body>
-  <header>
-    <div class="nav-container">
-      <div class="logo">Народна Музика</div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Головна</a></li>
-          <li><a href="folk.html">Народні пісні</a></li>
-          <li><a href="authors.html">Автори</a></li>
-          <li><a href="spiritual.html">Духовні пісні</a></li>
-          <li><a href="contacts.html">Контакти</a></li>
-          <li><a href="shop.html">Магазин</a></li>
-        </ul>
+<body class="bg-[var(--bg-light)] text-gray-900">
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center px-6 py-4">
+      <h1 class="text-3xl font-bold text-[var(--olive)] cursor-pointer" onclick="location.href='index.html'">UkrChoralScores</h1>
+      <nav class="space-x-6 text-lg">
+        <a href="index.html" class="hover:text-[var(--olive)]">Головна</a>
+        <a href="folk.html" class="hover:text-[var(--olive)]">Народні пісні</a>
+        <a href="authors.html" class="hover:text-[var(--olive)]">Автори</a>
+        <a href="spiritual.html" class="hover:text-[var(--olive)] font-semibold">Духовні пісні</a>
+        <a href="other.html" class="hover:text-[var(--olive)]">Інше</a>
+        <a href="news.html" class="hover:text-[var(--olive)]">Новини</a>
+        <a href="shop.html" class="hover:text-[var(--olive)]">Магазин</a>
       </nav>
     </div>
   </header>
 
-  <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f');">
-    <div class="hero-text">
-      <h1>Магазин</h1>
-      <p>Підтримайте проект — придбайте наші збірки, ноти, аудіо або подарункові товари</p>
-    </div>
-  </section>
+  <!-- Main content -->
+  <main class="container mx-auto px-4 py-10">
+    <h2 class="text-4xl font-bold mb-8 text-[var(--olive)]">Духовні пісні</h2>
 
-  <main>
-    <section>
-      <h2>Товари</h2>
-      <p>Тут буде перелік доступних видань, записів та продуктів. Ви можете підтримати проєкт, придбавши матеріали онлайн.</p>
-      <ul>
-        <li><strong>Збірка "Українські колядки" (PDF) — 80 грн</strong></li>
-        <li><strong>MP3 альбом "Голос предків" — 100 грн</strong></li>
-        <li><strong>Футболка "Співай українське" — 250 грн</strong></li>
-      </ul>
-    </section>
+    <div class="space-y-8">
+      <!-- Пісня 1 -->
+      <section class="bg-white p-6 rounded-xl shadow-md border border-[var(--accent)]">
+        <h3 class="text-2xl font-semibold mb-2 text-[var(--olive)]">Боже Великий Єдиний</h3>
+        <p class="mb-4 text-gray-700">
+          Хорові партитури духовного гімну, чотириголосний хор a cappella.
+        </p>
+        <a href="spiritual-bozhe-velykyy-yedynyy.html" class="btn inline-block">Переглянути партитури</a>
+      </section>
+
+      <!-- Пісня 2 -->
+      <section class="bg-white p-6 rounded-xl shadow-md border border-[var(--accent)]">
+        <h3 class="text-2xl font-semibold mb-2 text-[var(--olive)]">Отче Наш</h3>
+        <p class="mb-4 text-gray-700">
+          Хорові партитури частини диптиха Валентина Сильвестрова для хору a cappella.
+        </p>
+        <a href="spiritual-otche-nash.html" class="btn inline-block">Переглянути партитури</a>
+      </section>
+
+      <!-- Додаткові духовні пісні можна додати тут -->
+    </div>
   </main>
 
-  <footer>
-    <p>© 2025 Народна музика України | Збережемо традицію разом</p>
+  <!-- Footer -->
+  <footer class="bg-white border-t mt-12">
+    <div class="container mx-auto px-4 py-10 grid md:grid-cols-3 gap-8 text-sm text-gray-700">
+      <div>
+        <h4 class="text-[var(--olive)] text-lg font-bold mb-2">Контакти</h4>
+        <ul class="space-y-2">
+          <li><i class="fas fa-envelope mr-2 text-[var(--primary)]"></i><a href="mailto:ukrchoralscores@gmail.com" class="hover:underline">ukrchoralscores@gmail.com</a></li>
+          <li><i class="fab fa-telegram mr-2 text-[var(--primary)]"></i><a href="https://t.me/serhiisamuilov" target="_blank" class="hover:underline">@serhiisamuilov</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-[var(--olive)] text-lg font-bold mb-2">Соціальні мережі</h4>
+        <ul class="space-y-2">
+          <li><i class="fab fa-instagram mr-2 text-[var(--primary)]"></i><a href="https://instagram.com/serhiisamuilov" target="_blank" class="hover:underline">@serhiisamuilov</a></li>
+          <li><i class="fab fa-facebook mr-2 text-[var(--primary)]"></i><a href="https://facebook.com/serhiisamuilov" target="_blank" class="hover:underline">Сергій Самуйлов</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-[var(--olive)] text-lg font-bold mb-2">Про сайт</h4>
+        <p class="text-gray-600">
+          UkrChoralScores — платформа для збереження та поширення української хорової спадщини. Всі партитури доступні безкоштовно для перегляду та завантаження.
+        </p>
+      </div>
+    </div>
+    <div class="text-center text-xs text-gray-500 pt-6 pb-2">&copy; 2025 UkrChoralScores. Всі права захищено.</div>
   </footer>
 </body>
 </html>
