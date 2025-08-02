@@ -5,67 +5,89 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Українські хорові партитури</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
+
   <header>
-    <nav class="container">
-      <a href="index.html" class="active">Головна</a>
-      <a href="folk.html">Народні пісні</a>
-      <a href="authors.html">Автори</a>
-      <a href="spiritual.html">Духовні пісні</a>
-      <a href="other.html">Інше</a>
-      <a href="shop.html">Магазин</a>
-    </nav>
+    <div class="container nav">
+      <div class="logo">UkrChoral</div>
+      <nav>
+        <a href="index.html" class="active">Головна</a>
+        <a href="folk.html">Народні пісні</a>
+        <a href="authors.html">Автори</a>
+        <a href="spiritual.html">Духовні</a>
+        <a href="other.html">Інше</a>
+        <a href="shop.html">Магазин</a>
+      </nav>
+    </div>
   </header>
 
   <main class="container">
-    <section>
-      <h1>Українські хорові партитури</h1>
-      <p>Ласкаво просимо на ресурс для поширення, збереження та популяризації українських хорових творів.</p>
+
+    <section class="hero">
+      <h1>Хорові партитури українських пісень</h1>
+      <p>Архів народних і духовних творів у сучасному оформленні. Дивіться, слухайте, завантажуйте.</p>
     </section>
 
-    <section>
+    <section class="scores">
       <h2>Популярні партитури</h2>
-      <div class="card">
-        <img src="images/nych-yaka-misyachna.jpg" alt="Ніч яка місячна">
-        <h3>Ніч яка місячна</h3>
-        <p>Обробка для мішаного хору. Скачайте або перегляньте партитуру у PDF-форматі.</p>
-        <a class="btn" href="scores/nych-yaka-misyachna.pdf" target="_blank">Переглянути партитуру</a>
-      </div>
+      <div class="grid">
 
-      <div class="card">
-        <img src="images/oy-u-luzi.jpg" alt="Ой у лузі червона калина">
-        <h3>Ой у лузі червона калина</h3>
-        <p>Патріотична пісня. Доступні версії для жіночого та чоловічого хору.</p>
-        <a class="btn" href="scores/oy-u-luzi.pdf" target="_blank">Переглянути партитуру</a>
+        <div class="card">
+          <img src="images/nych-yaka-misyachna.jpg" alt="Ніч яка місячна">
+          <h3>Ніч яка місячна</h3>
+          <p>Для мішаного хору, SATB. Обробка народної пісні.</p>
+          <a class="btn" href="scores/nych-yaka-misyachna.pdf" target="_blank">Переглянути</a>
+        </div>
+
+        <div class="card">
+          <img src="images/oy-u-luzi.jpg" alt="Ой у лузі червона калина">
+          <h3>Ой у лузі червона калина</h3>
+          <p>Патріотична пісня. Варіанти для чоловічого й жіночого хору.</p>
+          <a class="btn" href="scores/oy-u-luzi.pdf" target="_blank">Переглянути</a>
+        </div>
+
+        <div class="card">
+          <img src="images/shchedryk.jpg" alt="Щедрик">
+          <h3>Щедрик</h3>
+          <p>Класичний твір Миколи Леонтовича у високій якості.</p>
+          <a class="btn" href="scores/shchedryk.pdf" target="_blank">Переглянути</a>
+        </div>
+
       </div>
     </section>
 
-    <section>
+    <section class="news">
       <h2>Новини</h2>
 
-      <div class="card">
-        <h3>Додано 5 нових творів!</h3>
-        <p>Ми поповнили архів новими сучасними обробками народних пісень. Ознайомтесь у розділі <a href="folk.html">"Народні пісні"</a>.</p>
+      <div class="news-card">
+        <h3>Додано 10 нових партитур!</h3>
+        <p>Оновлено розділи "Народні пісні" та "Духовні твори". Завантажуйте безкоштовно.</p>
       </div>
 
-      <div class="card">
-        <h3>Нова функція: завантаження партитур від користувачів</h3>
-        <p>Якщо ви автор або маєте обробки, надсилайте нам, і ми розмістимо їх на сайті!</p>
+      <div class="news-card">
+        <h3>Запрошення для авторів</h3>
+        <p>Якщо ви створюєте або обробляєте хорові твори — надсилайте нам свої партитури.</p>
       </div>
+
     </section>
   </main>
 
-  <footer class="container">
-    <h4>Контакти</h4>
-    <p>Email: <a href="mailto:ukrchoralscores@gmail.com">ukrchoralscores@gmail.com</a></p>
-    <div class="social-icons">
-      <a href="https://t.me/serhiisamuilov" target="_blank">Telegram</a>
-      <a href="https://instagram.com/serhiisamuilov" target="_blank">Instagram</a>
-      <a href="https://facebook.com/sergiisamuilov" target="_blank">Facebook</a>
+  <footer>
+    <div class="container footer-content">
+      <div>
+        <h4>Контакти</h4>
+        <p>Email: <a href="mailto:ukrchoralscores@gmail.com">ukrchoralscores@gmail.com</a></p>
+        <div class="social-icons">
+          <a href="https://t.me/serhiisamuilov" target="_blank">Telegram</a>
+          <a href="https://instagram.com/serhiisamuilov" target="_blank">Instagram</a>
+          <a href="https://facebook.com/sergiisamuilov" target="_blank">Facebook</a>
+        </div>
+      </div>
+      <p>© 2025 UkrChoral — хорові партитури онлайн</p>
     </div>
-    <p>© 2025 Українські хорові партитури</p>
   </footer>
+
 </body>
 </html>
