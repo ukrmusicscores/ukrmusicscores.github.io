@@ -1,26 +1,56 @@
-/* Загальні стилі */
-body {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  background-color: #f3fdf4; /* світлий фон */
-  color: #222;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
+/* --- Колірна палітра --- */
+:root {
+  --primary: #6b8e23;       /* оливковий акцент */
+  --accent: #c7d59e;        /* світло-оливковий */
+  --olive-light: #a3b86c;   /* світлий оливковий */
+  --bg-light: #f9fbf7;      /* дуже світлий фон */
+  --text-primary: #2f3e1c;  /* темно-зелений текст */
+  --text-secondary: #556b2f;/* оливковий для підписів */
+  --btn-bg: #8fbc8f;        /* м’який зелений фон кнопок */
+  --btn-hover: #6b8e23;     /* темніший оливковий при наведенні */
+  --border-color: #d8e1c4;  /* світлий оливковий для меж */
 }
 
-/* Кольори */
-:root {
-  --primary: #2e7d32;   /* темно-зелений */
-  --accent: #a5d6a7;    /* світло-зелений */
-  --olive: #708238;     /* оливковий */
-  --bg-light: #f3fdf4;  /* світлий фон */
+/* --- Загальні стилі --- */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+/* Контейнери */
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 /* Заголовки */
 h1, h2, h3, h4 {
+  color: var(--primary);
+  margin-top: 0;
+  margin-bottom: 0.5rem;
   font-weight: 700;
-  color: var(--olive);
-  margin: 0 0 1rem 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.2rem;
 }
 
 /* Посилання */
@@ -29,205 +59,168 @@ a {
   text-decoration: none;
   transition: color 0.3s ease;
 }
-a:hover {
-  color: var(--olive);
+
+a:hover,
+a:focus {
+  color: var(--btn-hover);
   text-decoration: underline;
+  outline: none;
 }
 
 /* Кнопки */
 .btn {
-  background-color: var(--primary);
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 9999px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  border: none;
   display: inline-block;
+  background-color: var(--btn-bg);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 600;
   text-align: center;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+  user-select: none;
 }
-.btn:hover {
-  background-color: #256029;
-  transform: translateY(-2px);
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--btn-hover);
+  outline: none;
+}
+
+/* Навігація */
+nav a {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-weight: 600;
+}
+
+nav a.active,
+nav a:hover {
+  color: var(--btn-hover);
+  border-bottom: 2px solid var(--btn-hover);
+  padding-bottom: 0.2rem;
 }
 
 /* Хедер */
 header {
-  background: white;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
   z-index: 999;
 }
-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 1.5rem;
-}
-header nav a {
-  margin-left: 1.5rem;
-  font-weight: 600;
-  font-size: 1rem;
+
+/* Підвал */
+footer {
+  background-color: white;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  padding: 2rem 1rem;
 }
 
-/* Секція Hero */
-section.text-center {
-  padding: 4rem 1rem;
-  background: white;
-}
-section.text-center h2 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
-  color: var(--olive);
-}
-section.text-center p {
-  font-size: 1.25rem;
-  color: #555;
+footer a {
+  color: var(--primary);
 }
 
-/* Партитури (карточки) */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+footer a:hover {
+  color: var(--btn-hover);
+  text-decoration: underline;
 }
 
-.grid {
-  display: grid;
-  gap: 2rem;
-}
-@media (min-width: 768px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (min-width: 1024px) {
-  .grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
+/* Карточки (для партитур, новин і магазину) */
 .card {
-  background: white;
-  border-radius: 1rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.07);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
+  background-color: white;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(107, 142, 35, 0.15);
+  padding: 1.5rem;
   transition: box-shadow 0.3s ease;
-  border: 1px solid var(--accent);
 }
+
 .card:hover {
-  box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 15px rgba(107, 142, 35, 0.3);
 }
+
+/* Зображення в карточках */
 .card img {
   width: 100%;
-  height: 12rem;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
   object-fit: cover;
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
-}
-.card .p-5 {
-  padding: 1.25rem;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.card-title {
-  color: var(--olive);
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
-}
-.card p {
-  color: #666;
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
-}
-.card .flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.card a {
-  font-weight: 600;
-  font-size: 0.95rem;
 }
 
-/* Секція новин */
-section.bg-[var(--accent)] {
+/* Форми */
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+  width: 100%;
+  padding: 0.5rem 0.8rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--btn-hover);
+  outline: none;
+}
+
+/* Таблиці (якщо потрібні) */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+
+table th,
+table td {
+  border: 1px solid var(--border-color);
+  padding: 0.6rem 1rem;
+  text-align: left;
+  color: var(--text-primary);
+}
+
+table th {
   background-color: var(--accent);
-}
-section.bg-[var(--accent)] p {
-  color: #2e7d32;
-  margin-bottom: 0.75rem;
-  font-size: 1.1rem;
-}
-section.bg-[var(--accent)] p.italic {
-  font-style: italic;
-  color: #4c633d;
+  font-weight: 600;
 }
 
-/* Футер */
-footer {
-  background: white;
-  border-top: 1px solid #ddd;
-  padding: 3rem 1rem;
-}
-footer .container {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-@media (min-width: 768px) {
-  footer .container {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-footer h4 {
-  font-weight: 700;
-  color: var(--olive);
-  margin-bottom: 1rem;
-}
-footer ul {
-  list-style: none;
-  padding-left: 0;
-}
-footer li {
-  margin-bottom: 0.75rem;
-  display: flex;
-  align-items: center;
-  color: #555;
-}
-footer li i {
-  margin-right: 0.75rem;
-  color: var(--primary);
-  font-size: 1.1rem;
-}
-
-/* Текст футера внизу */
-footer .text-center {
-  text-align: center;
-  font-size: 0.75rem;
-  color: #999;
-  margin-top: 2rem;
-}
-
-/* Адаптивність */
-@media (max-width: 480px) {
-  header nav a {
-    margin-left: 1rem;
-    font-size: 0.9rem;
-  }
-  section.text-center h2 {
+/* Мобільна адаптивність */
+@media (max-width: 768px) {
+  h1 {
     font-size: 2rem;
   }
-  .card img {
-    height: 10rem;
+  h2 {
+    font-size: 1.5rem;
   }
+  nav a {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+}
+
+/* --- Іконки соціальних мереж у футері --- */
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.4rem;
+  color: var(--primary);
+}
+
+.social-icons a:hover {
+  color: var(--btn-hover);
+}
+
+/* Плавність анімацій */
+* {
+  transition: all 0.25s ease-in-out;
 }
