@@ -2,92 +2,130 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Українські хорові партитури</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Нотна бібліотека | Головна</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a2e0e6ad5c.js" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --primary: #2e7d32; /* темно-зелений */
+      --accent: #a5d6a7;  /* світлий зелений */
+      --olive: #708238;   /* оливковий */
+      --bg-light: #f3fdf4; /* світлий фон */
+    }
+  </style>
 </head>
-<body>
-
-  <header>
-    <div class="container nav">
-      <div class="logo">UkrChoral</div>
-      <nav>
-        <a href="index.html" class="active">Головна</a>
-        <a href="folk.html">Народні пісні</a>
-        <a href="authors.html">Автори</a>
-        <a href="spiritual.html">Духовні</a>
-        <a href="other.html">Інше</a>
-        <a href="shop.html">Магазин</a>
+<body class="bg-[var(--bg-light)] text-gray-900 font-sans">
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <h1 class="text-2xl font-bold text-[var(--olive)]">UkrChoralScores</h1>
+      <nav class="space-x-4">
+        <a href="index.html" class="hover:text-[var(--olive)]">Головна</a>
+        <a href="folk.html" class="hover:text-[var(--olive)]">Народні пісні</a>
+        <a href="authors.html" class="hover:text-[var(--olive)]">Автори</a>
+        <a href="spiritual.html" class="hover:text-[var(--olive)]">Духовні пісні</a>
+        <a href="other.html" class="hover:text-[var(--olive)]">Інше</a>
+        <a href="news.html" class="hover:text-[var(--olive)]">Новини</a>
+        <a href="shop.html" class="hover:text-[var(--olive)]">Магазин</a>
       </nav>
     </div>
   </header>
 
-  <main class="container">
-
-    <section class="hero">
-      <h1>Хорові партитури українських пісень</h1>
-      <p>Архів народних і духовних творів у сучасному оформленні. Дивіться, слухайте, завантажуйте.</p>
+  <main class="container mx-auto px-4 py-10">
+    <section class="mb-12 text-center">
+      <h2 class="text-4xl font-extrabold text-[var(--olive)] mb-2">Ласкаво просимо до нотної бібліотеки</h2>
+      <p class="text-lg text-gray-700">Оберіть, переглядайте, завантажуйте та співайте українські хорові твори</p>
     </section>
 
-    <section class="scores">
-      <h2>Популярні партитури</h2>
-      <div class="grid">
+    <section class="mb-12">
+      <h3 class="text-3xl font-semibold mb-6 text-gray-800">Останні додані партитури</h3>
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 
-        <div class="card">
-          <img src="images/nych-yaka-misyachna.jpg" alt="Ніч яка місячна">
-          <h3>Ніч яка місячна</h3>
-          <p>Для мішаного хору, SATB. Обробка народної пісні.</p>
-          <a class="btn" href="scores/nych-yaka-misyachna.pdf" target="_blank">Переглянути</a>
+        <!-- Картка 1 -->
+        <div class="bg-white shadow-lg rounded-2xl overflow-hidden hover:shadow-xl transition duration-300 border border-[var(--accent)]">
+          <a href="/pdf/kalyna.pdf" target="_blank">
+            <img src="/img/kalyna-preview.jpg" alt="Ой у лузі червона калина" class="w-full h-48 object-cover">
+          </a>
+          <div class="p-6">
+            <h4 class="text-xl font-bold mb-2 text-[var(--olive)]">Ой у лузі червона калина</h4>
+            <p class="text-gray-600 mb-4">Чотириголосний хор. Українська повстанська пісня</p>
+            <div class="flex justify-between items-center">
+              <a href="/pdf/kalyna.pdf" target="_blank" class="text-[var(--primary)] font-medium hover:underline">Переглянути</a>
+              <a href="/pdf/kalyna.pdf" download class="bg-[var(--primary)] text-white px-4 py-2 rounded-full hover:opacity-90">Скачати</a>
+            </div>
+          </div>
         </div>
 
-        <div class="card">
-          <img src="images/oy-u-luzi.jpg" alt="Ой у лузі червона калина">
-          <h3>Ой у лузі червона калина</h3>
-          <p>Патріотична пісня. Варіанти для чоловічого й жіночого хору.</p>
-          <a class="btn" href="scores/oy-u-luzi.pdf" target="_blank">Переглянути</a>
+        <!-- Картка 2 -->
+        <div class="bg-white shadow-lg rounded-2xl overflow-hidden hover:shadow-xl transition duration-300 border border-[var(--accent)]">
+          <a href="/pdf/vesna.pdf" target="_blank">
+            <img src="/img/vesna-preview.jpg" alt="Весна іде" class="w-full h-48 object-cover">
+          </a>
+          <div class="p-6">
+            <h4 class="text-xl font-bold mb-2 text-[var(--olive)]">Весна іде</h4>
+            <p class="text-gray-600 mb-4">Трьохголосний жіночий хор. Лірична пісня</p>
+            <div class="flex justify-between items-center">
+              <a href="/pdf/vesna.pdf" target="_blank" class="text-[var(--primary)] font-medium hover:underline">Переглянути</a>
+              <a href="/pdf/vesna.pdf" download class="bg-[var(--primary)] text-white px-4 py-2 rounded-full hover:opacity-90">Скачати</a>
+            </div>
+          </div>
         </div>
 
-        <div class="card">
-          <img src="images/shchedryk.jpg" alt="Щедрик">
-          <h3>Щедрик</h3>
-          <p>Класичний твір Миколи Леонтовича у високій якості.</p>
-          <a class="btn" href="scores/shchedryk.pdf" target="_blank">Переглянути</a>
+        <!-- Картка 3 -->
+        <div class="bg-white shadow-lg rounded-2xl overflow-hidden hover:shadow-xl transition duration-300 border border-[var(--accent)]">
+          <a href="/pdf/bozhe.pdf" target="_blank">
+            <img src="/img/bozhe-preview.jpg" alt="Боже Великий Єдиний" class="w-full h-48 object-cover">
+          </a>
+          <div class="p-6">
+            <h4 class="text-xl font-bold mb-2 text-[var(--olive)]">Боже Великий Єдиний</h4>
+            <p class="text-gray-600 mb-4">Чотириголосний хор. Духовний гімн</p>
+            <div class="flex justify-between items-center">
+              <a href="/pdf/bozhe.pdf" target="_blank" class="text-[var(--primary)] font-medium hover:underline">Переглянути</a>
+              <a href="/pdf/bozhe.pdf" download class="bg-[var(--primary)] text-white px-4 py-2 rounded-full hover:opacity-90">Скачати</a>
+            </div>
+          </div>
         </div>
 
       </div>
     </section>
 
-    <section class="news">
-      <h2>Новини</h2>
-
-      <div class="news-card">
-        <h3>Додано 10 нових партитур!</h3>
-        <p>Оновлено розділи "Народні пісні" та "Духовні твори". Завантажуйте безкоштовно.</p>
+    <section class="mb-12">
+      <h3 class="text-3xl font-semibold mb-6 text-gray-800">Новини</h3>
+      <div class="bg-white border-l-4 border-[var(--olive)] p-6 shadow-md rounded-lg">
+        <p class="text-lg text-gray-700 mb-2">
+          <strong>01.08.2025:</strong> Додано три нові партитури, включаючи «Весна іде» та «Боже Великий Єдиний».
+        </p>
+        <p class="text-lg text-gray-700 mb-2">
+          <strong>28.07.2025:</strong> Запущено першу версію сайту з можливістю завантаження PDF!
+        </p>
+        <p class="text-sm text-gray-500 italic">Слідкуйте за оновленнями — далі більше!</p>
       </div>
-
-      <div class="news-card">
-        <h3>Запрошення для авторів</h3>
-        <p>Якщо ви створюєте або обробляєте хорові твори — надсилайте нам свої партитури.</p>
-      </div>
-
     </section>
   </main>
 
-  <footer>
-    <div class="container footer-content">
+  <footer class="bg-white border-t mt-12">
+    <div class="container mx-auto px-4 py-10 grid md:grid-cols-3 gap-8 text-sm text-gray-700">
       <div>
-        <h4>Контакти</h4>
-        <p>Email: <a href="mailto:ukrchoralscores@gmail.com">ukrchoralscores@gmail.com</a></p>
-        <div class="social-icons">
-          <a href="https://t.me/serhiisamuilov" target="_blank">Telegram</a>
-          <a href="https://instagram.com/serhiisamuilov" target="_blank">Instagram</a>
-          <a href="https://facebook.com/sergiisamuilov" target="_blank">Facebook</a>
-        </div>
+        <h4 class="text-[var(--olive)] text-lg font-bold mb-2">Контакти</h4>
+        <ul class="space-y-2">
+          <li><i class="fas fa-envelope mr-2 text-[var(--primary)]"></i><a href="mailto:ukrchoralscores@gmail.com" class="hover:underline">ukrchoralscores@gmail.com</a></li>
+          <li><i class="fab fa-telegram mr-2 text-[var(--primary)]"></i><a href="https://t.me/serhiisamuilov" target="_blank" class="hover:underline">@serhiisamuilov</a></li>
+        </ul>
       </div>
-      <p>© 2025 UkrChoral — хорові партитури онлайн</p>
+      <div>
+        <h4 class="text-[var(--olive)] text-lg font-bold mb-2">Соціальні мережі</h4>
+        <ul class="space-y-2">
+          <li><i class="fab fa-instagram mr-2 text-[var(--primary)]"></i><a href="https://instagram.com/serhiisamuilov" target="_blank" class="hover:underline">@serhiisamuilov</a></li>
+          <li><i class="fab fa-facebook mr-2 text-[var(--primary)]"></i><a href="https://facebook.com/serhiisamuilov" target="_blank" class="hover:underline">Сергій Самуйлов</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-[var(--olive)] text-lg font-bold mb-2">Про сайт</h4>
+        <p class="text-gray-600">UkrChoralScores — платформа для збереження та поширення хорової спадщини України. Всі партитури доступні безкоштовно для перегляду та завантаження.</p>
+      </div>
     </div>
+    <div class="text-center text-xs text-gray-500 pt-6 pb-2">&copy; 2025 UkrChoralScores. Всі права захищено.</div>
   </footer>
-
 </body>
 </html>
