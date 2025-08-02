@@ -43,42 +43,68 @@
 
   <!-- Popular Scores -->
 <section class="container mx-auto px-4 py-10">
-  <h3 class="text-3xl font-bold mb-8 text-[var(--olive)]">Популярні партитури</h3>
-  <div class="grid md:grid-cols-3 gap-8">
-    
-    <!-- Партитура 1 -->
-    <div class="bg-white p-2 rounded-lg shadow-sm max-w-[220px] mx-auto text-sm">
-      <img src="images/nych-yaka-misyachna.jpg" alt="Ніч яка місячна" class="rounded-md mb-3">
-      <h4 class="text-lg font-semibold mb-1">Ніч яка місячна</h4>
-      <p class="text-gray-600 mb-3 text-sm">Мішаний хор (SATB), обробка народної пісні.</p>
-      <div class="flex space-x-3">
-        <a href="scores/nych-yaka-misyachna.pdf" target="_blank" class="btn">Переглянути</a>
-        <a href="scores/nych-yaka-misyachna.pdf" download class="btn bg-gray-300 text-gray-800 hover:bg-gray-400">Завантажити</a>
-      </div>
-    </div>
+  <h3 class="text-3xl font-bold mb-6 text-[var(--olive)]">Популярні партитури</h3>
 
-    <!-- Партитура 2 -->
-    <div class="bg-white p-2 rounded-lg shadow-sm max-w-[220px] mx-auto text-sm">
-      <img src="images/oy-u-luzi.jpg" alt="Ой у лузі червона калина" class="rounded-md mb-3">
-      <h4 class="text-lg font-semibold mb-1">Ой у лузі червона калина</h4>
-      <p class="text-gray-600 mb-3 text-sm">Патріотична пісня у двох варіантах: жіночий і чоловічий хор.</p>
-      <div class="flex space-x-3">
-        <a href="scores/oy-u-luzi.pdf" target="_blank" class="btn">Переглянути</a>
-        <a href="scores/oy-u-luzi.pdf" download class="btn bg-gray-300 text-gray-800 hover:bg-gray-400">Завантажити</a>
-      </div>
-    </div>
+  <div class="relative">
+    <!-- Scroll buttons -->
+    <button onclick="scrollLeft()" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white border rounded-full p-2 shadow hover:bg-gray-100">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <button onclick="scrollRight()" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white border rounded-full p-2 shadow hover:bg-gray-100">
+      <i class="fas fa-chevron-right"></i>
+    </button>
 
-    <!-- Партитура 3 -->
-    <div class="bg-white p-2 rounded-lg shadow-sm max-w-[220px] mx-auto text-sm">
-      <img src="images/shchedryk.jpg" alt="Щедрик" class="rounded-md mb-3">
-      <h4 class="text-lg font-semibold mb-1">Щедрик</h4>
-      <p class="text-gray-600 mb-3 text-sm">Твір Миколи Леонтовича для мішаного хору. Легендарна обробка.</p>
-      <div class="flex space-x-3">
-        <a href="scores/shchedryk.pdf" target="_blank" class="btn">Переглянути</a>
-        <a href="scores/shchedryk.pdf" download class="btn bg-gray-300 text-gray-800 hover:bg-gray-400">Завантажити</a>
+    <!-- Scrollable container -->
+    <div id="scoreCarousel" class="flex overflow-x-auto space-x-4 scroll-smooth py-2 px-2">
+      <!-- Картка партитури -->
+      <div class="min-w-[150px] bg-white p-2 rounded-xl shadow hover:shadow-lg transition duration-300 text-xs">
+        <img src="images/nych-yaka-misyachna.jpg" alt="Ніч яка місячна" class="rounded mb-1 w-full max-h-[80px] object-contain" />
+        <h4 class="font-semibold mb-1">Ніч яка місячна</h4>
+        <div class="flex flex-col gap-1">
+          <a href="scores/nych-yaka-misyachna.pdf" target="_blank" class="btn px-2 py-1 text-xs">Перегляд</a>
+          <a href="scores/nych-yaka-misyachna.pdf" download class="btn bg-gray-300 text-gray-800 hover:bg-gray-400 px-2 py-1 text-xs">Скачати</a>
+        </div>
       </div>
-    </div>
 
+      <!-- Інші партитури -->
+      <div class="min-w-[150px] bg-white p-2 rounded-xl shadow hover:shadow-lg transition duration-300 text-xs">
+        <img src="images/oy-u-luzi.jpg" alt="Ой у лузі" class="rounded mb-1 w-full max-h-[80px] object-contain" />
+        <h4 class="font-semibold mb-1">Ой у лузі</h4>
+        <div class="flex flex-col gap-1">
+          <a href="scores/oy-u-luzi.pdf" target="_blank" class="btn px-2 py-1 text-xs">Перегляд</a>
+          <a href="scores/oy-u-luzi.pdf" download class="btn bg-gray-300 text-gray-800 hover:bg-gray-400 px-2 py-1 text-xs">Скачати</a>
+        </div>
+      </div>
+
+      <div class="min-w-[150px] bg-white p-2 rounded-xl shadow hover:shadow-lg transition duration-300 text-xs">
+        <img src="images/shchedryk.jpg" alt="Щедрик" class="rounded mb-1 w-full max-h-[80px] object-contain" />
+        <h4 class="font-semibold mb-1">Щедрик</h4>
+        <div class="flex flex-col gap-1">
+          <a href="scores/shchedryk.pdf" target="_blank" class="btn px-2 py-1 text-xs">Перегляд</a>
+          <a href="scores/shchedryk.pdf" download class="btn bg-gray-300 text-gray-800 hover:bg-gray-400 px-2 py-1 text-xs">Скачати</a>
+        </div>
+      </div>
+
+      <!-- Додаткові партитури -->
+      <div class="min-w-[150px] bg-white p-2 rounded-xl shadow hover:shadow-lg transition duration-300 text-xs">
+        <img src="images/plive-kacha.jpg" alt="Пливе кача" class="rounded mb-1 w-full max-h-[80px] object-contain" />
+        <h4 class="font-semibold mb-1">Пливе кача</h4>
+        <div class="flex flex-col gap-1">
+          <a href="scores/plive-kacha.pdf" target="_blank" class="btn px-2 py-1 text-xs">Перегляд</a>
+          <a href="scores/plive-kacha.pdf" download class="btn bg-gray-300 text-gray-800 hover:bg-gray-400 px-2 py-1 text-xs">Скачати</a>
+        </div>
+      </div>
+
+      <div class="min-w-[150px] bg-white p-2 rounded-xl shadow hover:shadow-lg transition duration-300 text-xs">
+        <img src="images/vesnyanka.jpg" alt="Веснянка" class="rounded mb-1 w-full max-h-[80px] object-contain" />
+        <h4 class="font-semibold mb-1">Веснянка</h4>
+        <div class="flex flex-col gap-1">
+          <a href="scores/vesnyanka.pdf" target="_blank" class="btn px-2 py-1 text-xs">Перегляд</a>
+          <a href="scores/vesnyanka.pdf" download class="btn bg-gray-300 text-gray-800 hover:bg-gray-400 px-2 py-1 text-xs">Скачати</a>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
 
@@ -123,5 +149,15 @@
     </div>
     <div class="text-center text-xs text-gray-500 pt-6 pb-2">&copy; 2025 UkrChoralScores. Всі права захищено.</div>
   </footer>
+  
+<script>
+  const carousel = document.getElementById('scoreCarousel');
+  function scrollLeft() {
+    carousel.scrollBy({ left: -160, behavior: 'smooth' });
+  }
+  function scrollRight() {
+    carousel.scrollBy({ left: 160, behavior: 'smooth' });
+  }
+</script>
 </body>
 </html>
