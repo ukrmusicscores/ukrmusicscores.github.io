@@ -1,14 +1,14 @@
 /* --- Колірна палітра --- */
 :root {
-  --primary: #1e3a8a;       /* насичений морський синій */
-  --accent: #93c5fd;        /* світло-блакитний */
-  --accent-light: #dbeafe;  /* дуже світлий блакитний фон */
-  --bg-light: #f9fbff;      /* майже білий з блакитним відтінком */
-  --text-primary: #1e293b;  /* темно-синій текст */
-  --text-secondary: #475569;/* сірий з синім відтінком для підписів */
-  --btn-bg: #3b82f6;        /* яскравий синій для кнопок */
-  --btn-hover: #1e40af;     /* темніший синій для ховера */
-  --border-color: #bfdbfe;  /* світло-блакитний для меж */
+  --primary: #7c3aed;       /* насичений лавандовий (фіолетовий) */
+  --accent: #c4b5fd;        /* світло-фіолетовий (пастельний) */
+  --accent-light: #ede9fe;  /* дуже світлий лавандовий фон */
+  --bg-light: #fafafa;      /* майже білий фон */
+  --text-primary: #4c1d95;  /* темно-фіолетовий текст */
+  --text-secondary: #6b21a8;/* середній фіолетовий для підписів */
+  --btn-bg: #8b5cf6;        /* яскравий лавандовий для кнопок */
+  --btn-hover: #6d28d9;     /* темніший фіолетовий для ховера */
+  --border-color: #ddd6fe;  /* світло-фіолетовий для меж */
 }
 
 /* --- Загальні стилі --- */
@@ -105,7 +105,7 @@ nav a:hover {
 /* Хедер */
 header {
   background-color: white;
-  box-shadow: 0 2px 6px rgba(30, 58, 138, 0.1);
+  box-shadow: 0 2px 6px rgba(124, 58, 237, 0.1);
   position: sticky;
   top: 0;
   z-index: 999;
@@ -134,13 +134,13 @@ footer a:hover {
   background-color: white;
   border: 1px solid var(--border-color);
   border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(59, 130, 246, 0.15);
+  box-shadow: 0 2px 6px rgba(139, 92, 246, 0.15);
   padding: 1.5rem;
   transition: box-shadow 0.3s ease;
 }
 
 .card:hover {
-  box-shadow: 0 6px 15px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 6px 15px rgba(139, 92, 246, 0.3);
 }
 
 /* Зображення в карточках */
