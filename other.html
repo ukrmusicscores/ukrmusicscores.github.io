@@ -9,81 +9,109 @@
   <link rel="stylesheet" href="style.css" />
   <style>
     :root {
-      --primary: #2e7d32;
-      --accent: #a5d6a7;
-      --olive: #708238;
-      --bg-light: #f3fdf4;
+      --primary: #708238;
+      --bg-light: #f5f5f5;
+    }
+
+    body {
+      background-color: var(--bg-light);
+      color: #222;
+    }
+
+    .btn {
+      background-color: var(--primary);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 0.375rem;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background-color: #5a6b27;
+    }
+
+    h1, h2, h3, h4 {
+      color: var(--primary);
+    }
+
+    .text-primary {
+      color: var(--primary);
+    }
+
+    .border-primary {
+      border-color: var(--primary);
     }
   </style>
 </head>
-<body class="bg-[var(--bg-light)] text-gray-900">
+<body>
+
   <!-- Header -->
   <header class="bg-white shadow-md sticky top-0 z-50">
     <div class="container mx-auto flex justify-between items-center px-6 py-4">
-      <h1 class="text-3xl font-bold text-[var(--olive)] cursor-pointer" onclick="location.href='index.html'">UkrChoralScores</h1>
+      <h1 class="text-3xl font-bold cursor-pointer" onclick="location.href='index.html'">UkrChoralScores</h1>
       <nav class="space-x-6 text-lg">
-        <a href="index.html" class="hover:text-[var(--olive)]">Головна</a>
-        <a href="folk.html" class="hover:text-[var(--olive)]">Народні пісні</a>
-        <a href="authors.html" class="hover:text-[var(--olive)]">Автори</a>
-        <a href="spiritual.html" class="hover:text-[var(--olive)]">Духовні пісні</a>
-        <a href="other.html" class="hover:text-[var(--olive)] font-semibold">Інше</a>
-        <a href="news.html" class="hover:text-[var(--olive)]">Новини</a>
-        <a href="shop.html" class="hover:text-[var(--olive)]">Магазин</a>
+        <a href="index.html" class="hover:text-primary">Головна</a>
+        <a href="folk.html" class="hover:text-primary">Народні пісні</a>
+        <a href="authors.html" class="hover:text-primary">Автори</a>
+        <a href="spiritual.html" class="hover:text-primary">Духовні пісні</a>
+        <a href="other.html" class="text-primary font-semibold">Інше</a>
+        <a href="news.html" class="hover:text-primary">Новини</a>
+        <a href="shop.html" class="hover:text-primary">Магазин</a>
       </nav>
     </div>
   </header>
 
   <!-- Main content -->
   <main class="container mx-auto px-4 py-10">
-    <h2 class="text-4xl font-bold mb-8 text-[var(--olive)]">Інше</h2>
+    <h2 class="text-4xl font-bold mb-8">Інше</h2>
 
-    <p class="mb-8 text-gray-700 max-w-3xl">
+    <p class="mb-8 max-w-3xl">
       Тут розміщуються твори невідомих або сучасних авторів, які бажають поділитися своїми партитурами з хоровою спільнотою. Якщо ви автор і хочете розмістити свої твори, будь ласка, зв'яжіться з нами через контактні дані внизу.
     </p>
 
     <div class="space-y-8">
       <!-- Твір 1 -->
-      <section class="bg-white p-6 rounded-xl shadow-md border border-[var(--accent)]">
-        <h3 class="text-2xl font-semibold mb-2 text-[var(--olive)]">Весняна пісня</h3>
-        <p class="mb-4 text-gray-700">
+      <section class="bg-white p-6 rounded-xl shadow-md border border-primary">
+        <h3 class="text-2xl font-semibold mb-2">Весняна пісня</h3>
+        <p class="mb-4">
           Сучасна хореографічна пісня для мішаного хору a cappella.
         </p>
         <a href="other-vesnyana-pisnya.html" class="btn inline-block">Переглянути партитури</a>
       </section>
 
       <!-- Твір 2 -->
-      <section class="bg-white p-6 rounded-xl shadow-md border border-[var(--accent)]">
-        <h3 class="text-2xl font-semibold mb-2 text-[var(--olive)]">Нова симфонія хорів</h3>
-        <p class="mb-4 text-gray-700">
+      <section class="bg-white p-6 rounded-xl shadow-md border border-primary">
+        <h3 class="text-2xl font-semibold mb-2">Нова симфонія хорів</h3>
+        <p class="mb-4">
           Авторський твір сучасного композитора для хору з інноваційною аранжуванням.
         </p>
         <a href="other-nova-simfoniya-horiv.html" class="btn inline-block">Переглянути партитури</a>
       </section>
-
-      <!-- Додаткові твори можна додати тут -->
     </div>
   </main>
 
   <!-- Footer -->
   <footer class="bg-white border-t mt-12">
-    <div class="container mx-auto px-4 py-10 grid md:grid-cols-3 gap-8 text-sm text-gray-700">
+    <div class="container mx-auto px-4 py-10 grid md:grid-cols-3 gap-8 text-sm text-[#222]">
       <div>
-        <h4 class="text-[var(--olive)] text-lg font-bold mb-2">Контакти</h4>
+        <h4 class="text-lg font-bold mb-2 text-primary">Контакти</h4>
         <ul class="space-y-2">
-          <li><i class="fas fa-envelope mr-2 text-[var(--primary)]"></i><a href="mailto:ukrchoralscores@gmail.com" class="hover:underline">ukrchoralscores@gmail.com</a></li>
-          <li><i class="fab fa-telegram mr-2 text-[var(--primary)]"></i><a href="https://t.me/serhiisamuilov" target="_blank" class="hover:underline">@serhiisamuilov</a></li>
+          <li><i class="fas fa-envelope mr-2 text-primary"></i><a href="mailto:ukrchoralscores@gmail.com" class="hover:underline">ukrchoralscores@gmail.com</a></li>
+          <li><i class="fab fa-telegram mr-2 text-primary"></i><a href="https://t.me/serhiisamuilov" target="_blank" class="hover:underline">@serhiisamuilov</a></li>
         </ul>
       </div>
       <div>
-        <h4 class="text-[var(--olive)] text-lg font-bold mb-2">Соціальні мережі</h4>
+        <h4 class="text-lg font-bold mb-2 text-primary">Соціальні мережі</h4>
         <ul class="space-y-2">
-          <li><i class="fab fa-instagram mr-2 text-[var(--primary)]"></i><a href="https://instagram.com/serhiisamuilov" target="_blank" class="hover:underline">@serhiisamuilov</a></li>
-          <li><i class="fab fa-facebook mr-2 text-[var(--primary)]"></i><a href="https://facebook.com/serhiisamuilov" target="_blank" class="hover:underline">Сергій Самуйлов</a></li>
+          <li><i class="fab fa-instagram mr-2 text-primary"></i><a href="https://instagram.com/serhiisamuilov" target="_blank" class="hover:underline">@serhiisamuilov</a></li>
+          <li><i class="fab fa-facebook mr-2 text-primary"></i><a href="https://facebook.com/serhiisamuilov" target="_blank" class="hover:underline">Сергій Самуйлов</a></li>
         </ul>
       </div>
       <div>
-        <h4 class="text-[var(--olive)] text-lg font-bold mb-2">Про сайт</h4>
-        <p class="text-gray-600">
+        <h4 class="text-lg font-bold mb-2 text-primary">Про сайт</h4>
+        <p>
           UkrChoralScores — платформа для збереження та поширення української хорової спадщини. Всі партитури доступні безкоштовно для перегляду та завантаження.
         </p>
       </div>
