@@ -196,12 +196,12 @@
   </style>
 </head>
 <body>
-  <!-- Header -->
+
   <header class="bg-white shadow-md sticky top-0 z-50">
     <div class="container mx-auto flex justify-between items-center px-6 py-4">
-      <h1 class="text-3xl font-bold text-[color:var(--olive)] cursor-pointer" onclick="location.href='index.html'">UkrChoralScores</h1>
+      <h1 class="text-3xl font-bold cursor-pointer" onclick="location.href='index.html'">UkrChoralScores</h1>
       <nav class="space-x-6 text-lg">
-        <a href="index.html" class="text-primary font-semibold">Головна</a>
+        <a href="index.html" class="font-semibold text-primary">Головна</a>
         <a href="folk.html" class="hover:text-primary">Народні пісні</a>
         <a href="authors.html" class="hover:text-primary">Автори</a>
         <a href="spiritual.html" class="hover:text-primary">Духовні пісні</a>
@@ -307,32 +307,32 @@
   </section>
 
   <!-- Footer -->
-  <footer>
-    <div class="container mx-auto px-4 py-10 grid md:grid-cols-3 gap-8 text-sm">
+  <footer class="bg-white border-t mt-12">
+    <div class="container mx-auto px-4 py-10 grid md:grid-cols-3 gap-8 text-sm text-[#222]">
       <div>
-        <h4>Контакти</h4>
+        <h4 class="text-lg font-bold mb-2 text-primary">Контакти</h4>
         <ul class="space-y-2">
-          <li><i class="fas fa-envelope mr-2"></i><a href="mailto:ukrchoralscores@gmail.com" class="hover:underline">ukrchoralscores@gmail.com</a></li>
-          <li><i class="fab fa-telegram mr-2"></i><a href="https://t.me/serhiisamuilov" target="_blank" class="hover:underline">@serhiisamuilov</a></li>
+          <li><i class="fas fa-envelope mr-2 text-primary"></i><a href="mailto:ukrchoralscores@gmail.com" class="hover:underline">ukrchoralscores@gmail.com</a></li>
+          <li><i class="fab fa-telegram mr-2 text-primary"></i><a href="https://t.me/serhiisamuilov" target="_blank" class="hover:underline">@serhiisamuilov</a></li>
         </ul>
       </div>
       <div>
-        <h4>Соціальні мережі</h4>
+        <h4 class="text-lg font-bold mb-2 text-primary">Соціальні мережі</h4>
         <ul class="space-y-2">
-          <li><i class="fab fa-instagram mr-2"></i><a href="https://instagram.com/serhiisamuilov" target="_blank" class="hover:underline">@serhiisamuilov</a></li>
-          <li><i class="fab fa-facebook mr-2"></i><a href="https://facebook.com/sergiisamuilov" target="_blank" class="hover:underline">Сергій Самуйлов</a></li>
+          <li><i class="fab fa-instagram mr-2 text-primary"></i><a href="https://instagram.com/serhiisamuilov" target="_blank" class="hover:underline">@serhiisamuilov</a></li>
+          <li><i class="fab fa-facebook mr-2 text-primary"></i><a href="https://facebook.com/sergiisamuilov" target="_blank" class="hover:underline">Сергій Самуйлов</a></li>
         </ul>
       </div>
       <div>
-        <h4>Про сайт</h4>
+        <h4 class="text-lg font-bold mb-2 text-primary">Про сайт</h4>
         <p>
-          UkrChoralScores — онлайн-архів для збереження та поширення української хорової спадщини. Всі партитури доступні безкоштовно.
+          UkrChoralScores — платформа для збереження та поширення української хорової спадщини. Всі партитури доступні безкоштовно для перегляду та завантаження.
         </p>
       </div>
     </div>
     <div class="text-center text-xs text-gray-500 pt-6 pb-2">&copy; 2025 UkrChoralScores. Всі права захищено.</div>
   </footer>
-  
+
 <script>
   const carousel = document.getElementById('scoreCarousel');
   function scrollLeft() {
