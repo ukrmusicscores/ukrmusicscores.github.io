@@ -1,0 +1,48 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "songs"
+    label: "Пісні"
+    folder: "songs"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Назва", name: "title", widget: "string" }
+      - { label: "Опис", name: "description", widget: "text" }
+      - { label: "Файл (mp3/pdf)", name: "file", widget: "file" }
+      - { label: "Зображення", name: "image", widget: "image" }
+      - { label: "Текст пісні", name: "lyrics", widget: "markdown" }
+
+  - name: "pages"
+    label: "Сторінки сайту"
+    files:
+      - label: "Головна"
+        name: "home"
+        file: "index.html"
+        fields:
+          - { label: "Вміст", name: "body", widget: "code", default_language: "html" }
+      - label: "Народні пісні"
+        name: "folk"
+        file: "folk.html"
+        fields:
+          - { label: "Вміст", name: "body", widget: "code", default_language: "html" }
+      - label: "Автори"
+        name: "authors"
+        file: "authors.html"
+        fields:
+          - { label: "Вміст", name: "body", widget: "code", default_language: "html" }
+      - label: "Духовні пісні"
+        name: "spiritual"
+        file: "spiritual.html"
+        fields:
+          - { label: "Вміст", name: "body", widget: "code", default_language: "html" }
+      - label: "Контакти"
+        name: "contacts"
+        file: "contacts.html"
+        fields:
+          - { label: "Вміст", name: "body", widget: "code", default_language: "html" }
