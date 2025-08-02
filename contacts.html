@@ -10,21 +10,24 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <div class="nav-container">
-      <div class="logo">Музичний архів</div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Головна</a></li>
-          <li><a href="folk.html">Народні пісні</a></li>
-          <li><a href="authors.html">Автори</a></li>
-          <li><a href="spiritual.html">Духовні пісні</a></li>
-          <li><a href="contacts.html">Контакти</a></li>
-          <li><a href="shop.html">Магазин</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  
+<!-- Header -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+  <div class="container mx-auto flex justify-between items-center px-6 py-4">
+    <h1 class="text-3xl font-bold cursor-pointer text-[--primary]" onclick="location.href='index.html'">
+      UkrChoralScores
+    </h1>
+    <nav class="space-x-6 text-lg font-semibold">
+      <a href="index.html" class="nav-link">Головна</a>
+      <a href="folk.html" class="nav-link">Народні пісні</a>
+      <a href="authors.html" class="nav-link">Автори</a>
+      <a href="spiritual.html" class="nav-link">Духовні пісні</a>
+      <a href="other.html" class="nav-link">Інше</a>
+      <a href="news.html" class="nav-link">Новини</a>
+      <a href="shop.html" class="nav-link">Магазин</a>
+    </nav>
+  </div>
+</header>
 
   <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f');">
     <div class="hero-text">
@@ -48,5 +51,16 @@
   <footer>
     <p>© 2025 Народна музика України | Збережемо традицію разом</p>
   </footer>
+
+  <script>
+  // Підсвічування активного пункту меню
+  const links = document.querySelectorAll('nav .nav-link');
+  links.forEach(link => {
+    if (link.href === window.location.href) {
+      link.classList.add('text-[--primary]');
+    }
+  });
+</script>
+  
 </body>
 </html>
