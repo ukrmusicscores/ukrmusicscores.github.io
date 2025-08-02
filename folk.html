@@ -21,6 +21,7 @@
           <li><a href="spiritual.html">Духовні пісні</a></li>
           <li><a href="contacts.html">Контакти</a></li>
           <li><a href="shop.html">Магазин</a></li>
+          <input type="text" id="searchInput" placeholder="Пошук пісні..." class="search-box">
         </ul>
       </nav>
     </div>
@@ -32,17 +33,34 @@
       <p>О. Довженко</p>
     </div>
   </section>
+  
+  <script>
+  const searchInput = document.getElementById('searchInput');
+  const listItems = document.querySelectorAll('.downloads ul li');
+
+  searchInput.addEventListener('input', function () {
+    const searchValue = this.value.toLowerCase();
+    listItems.forEach(item => {
+      const text = item.textContent.toLowerCase();
+      item.style.display = text.includes(searchValue) ? 'block' : 'none';
+    });
+  });
+</script>
 
   <main>
-    <section>
-      <h2>Пісні</h2>
-      <p>Тут буде перелік доступних видань, записів та продуктів. Ви можете підтримати проєкт, придбавши матеріали онлайн.</p>
-      <ul>
-        <li><strong>Збірка "Українські колядки" (PDF) — 80 грн</strong></li>
-        <li><strong>MP3 альбом "Голос предків" — 100 грн</strong></li>
-        <li><strong>Футболка "Співай українське" — 250 грн</strong></li>
-      </ul>
-    </section>
+<section class="song-cards">
+  <div class="song-card">
+    <img src="images/moonlight.jpg" alt="Ніч яка місячна">
+    <h3>Ніч яка місячна</h3>
+    <a href="nich-yaka-misyachna.html" class="btn">Перейти</a>
+  </div>
+  
+  <div class="song-card">
+    <img src="images/kalyna.jpg" alt="Ой у лузі червона калина">
+    <h3>Ой у лузі червона калина</h3>
+    <a href="oy-u-luzi.html" class="btn">Перейти</a>
+  </div>
+</section>
   </main>
 
   <footer>
