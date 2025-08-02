@@ -32,21 +32,9 @@
       <p>О. Довженко</p>
     </div>
   </section>
-  <input type="text" id="searchInput" placeholder="Пошук пісні..." class="search-box">
-  <script>
-  const searchInput = document.getElementById('searchInput');
-  const listItems = document.querySelectorAll('.downloads ul li');
-
-  searchInput.addEventListener('input', function () {
-    const searchValue = this.value.toLowerCase();
-    listItems.forEach(item => {
-      const text = item.textContent.toLowerCase();
-      item.style.display = text.includes(searchValue) ? 'block' : 'none';
-    });
-  });
-</script>
 
   <main>
+    <input type="text" id="songSearch" placeholder="Пошук пісні..." class="search-box">
 <section class="song-cards">
   <div class="song-card">
     <img src="images/moonlight.jpg" alt="Ніч яка місячна">
@@ -61,6 +49,48 @@
   </div>
 </section>
   </main>
+  
+  <script>
+  // Пошук по картках пісень
+  document.getElementById('songSearch')?.addEventListener('input', function () {
+    const search = this.value.toLowerCase();
+    document.querySelectorAll('.song-card').forEach(card => {
+      const title = card.querySelector('h3').textContent.toLowerCase();
+      card.style.display = title.includes(search) ? 'block' : 'none';
+    });
+  });
+
+  // Пошук по списку завантажень (якщо він ще є)
+  document.getElementById('searchInput')?.addEventListener('input', function () {
+    const search = this.value.toLowerCase();
+    document.querySelectorAll('#downloadList li').forEach(item => {
+      const text = item.textContent.toLowerCase();
+      item.style.display = text.includes(search) ? 'block' : 'none';
+    });
+  });
+
+  // Модальне вікно входу
+  function toggleModal() {
+    const modal = document.getElementById('loginModal');
+    modal.style.display = (modal.style.display === 'flex') ? 'none' : 'flex';
+  }
+
+  window.onclick = function (e) {
+    const modal = document.getElementById('loginModal');
+    if (e.target === modal) modal.style.display = 'none';
+  };
+
+  // Анімація при появі
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
 
   <footer>
     <p>© 2025 Народна музика України | Збережемо традицію разом</p>
