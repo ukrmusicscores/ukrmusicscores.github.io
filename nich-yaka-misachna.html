@@ -140,21 +140,48 @@ Hiч яка мiсячна, зоряна, ясная,
   </iframe>
 </div>
       
-    <!-- Downloads -->
-    <section class="mt-12">
-      <h3 class="text-2xl font-bold mb-4 text-[--primary]">Завантаження</h3>
-      <div class="grid gap-6 sm:grid-cols-2">
-        <div class="bg-white border border-[--accent] rounded-lg p-6 shadow-md">
-          <h4 class="text-xl font-semibold mb-2">Партитура (повна версія)</h4>
-          <a href="downloads/nich-yaka-misyachna-full.pdf" class="btn" download>Скачати PDF</a>
-        </div>
-        <div class="bg-white border border-[--accent] rounded-lg p-6 shadow-md">
-          <h4 class="text-xl font-semibold mb-2">Вокальна партія</h4>
-          <a href="downloads/nich-yaka-misyachna-voice.pdf" class="btn" download>Скачати PDF</a>
+<!-- Downloads -->
+<section class="mt-12">
+  <h3 class="text-2xl font-bold mb-6 text-[--primary]">Партитури</h3>
+
+  <div class="space-y-8">
+
+    <!-- Item 1 -->
+    <div class="bg-white border border-[--accent] rounded-lg p-6 shadow-md flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+      <div class="flex items-center gap-4">
+        <img src="images/nich-full-thumbnail.jpg" alt="Мініатюра повної партитури" class="w-24 h-auto rounded shadow cursor-pointer hover:scale-105 transition-transform" onclick="showPreview('downloads/nich-yaka-misyachna-full.pdf')">
+        <div>
+          <h4 class="text-lg font-semibold mb-2 text-[--primary]">Партитура (повна версія)</h4>
+          <div class="flex gap-4">
+            <a href="downloads/nich-yaka-misyachna-full.pdf" class="btn" download>Скачати PDF</a>
+            <button class="btn" onclick="showPDF('downloads/nich-yaka-misyachna-full.pdf')">Переглянути</button>
+          </div>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+
+    <!-- Item 2 -->
+    <div class="bg-white border border-[--accent] rounded-lg p-6 shadow-md flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+      <div class="flex items-center gap-4">
+        <img src="images/nich-voice-thumbnail.jpg" alt="Мініатюра вокальної партії" class="w-24 h-auto rounded shadow cursor-pointer hover:scale-105 transition-transform" onclick="showPreview('downloads/nich-yaka-misyachna-voice.pdf')">
+        <div>
+          <h4 class="text-lg font-semibold mb-2 text-[--primary]">Вокальна партія</h4>
+          <div class="flex gap-4">
+            <a href="downloads/nich-yaka-misyachna-voice.pdf" class="btn" download>Скачати PDF</a>
+            <button class="btn" onclick="showPDF('downloads/nich-yaka-misyachna-voice.pdf')">Переглянути</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- PDF viewer -->
+  <div id="pdf-viewer" class="mt-10 hidden">
+    <h4 class="text-xl font-bold mb-4 text-[--primary]">Перегляд партитури:</h4>
+    <iframe id="pdf-frame" class="w-full h-[600px] border rounded-lg shadow" allowfullscreen></iframe>
+  </div>
+</section>
 
   <!-- Footer -->
   <footer class="bg-white border-t mt-12">
@@ -182,5 +209,19 @@ Hiч яка мiсячна, зоряна, ясная,
     </div>
     <div class="text-center text-xs text-gray-500 pt-6 pb-2">&copy; 2025 UkrChoralScores. Всі права захищено.</div>
   </footer>
+
+      <script>
+  function showPDF(file) {
+    const frame = document.getElementById('pdf-frame');
+    const viewer = document.getElementById('pdf-viewer');
+    frame.src = file;
+    viewer.classList.remove('hidden');
+    frame.scrollIntoView({ behavior: "smooth" });
+  }
+
+  function showPreview(file) {
+    window.open(file, '_blank');
+  }
+</script>
 </body>
 </html>
