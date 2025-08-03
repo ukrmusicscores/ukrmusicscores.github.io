@@ -314,3 +314,11 @@ footer .text-center {
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(112, 130, 56, 0.2); /* тінь */
 }
+
+footer.page-nich .container {
+  max-width: none;
+  width: 100%;
+  margin: 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
