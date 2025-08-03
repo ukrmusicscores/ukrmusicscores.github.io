@@ -140,43 +140,38 @@ Hiч яка мiсячна, зоряна, ясная,
   </iframe>
 </div>
       
-<!-- Downloads -->
 <section class="mt-12">
   <h3 class="text-2xl font-bold mb-6 text-[--primary]">Партитури</h3>
 
-  <div class="space-y-8">
+  <div class="space-y-10">
 
     <!-- Item 1 -->
-    <div class="bg-white border border-[--accent] rounded-lg p-6 shadow-md flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
-      <div class="flex items-center gap-4">
-        <img src="images/nich-full-thumbnail.jpg" alt="Мініатюра повної партитури" class="w-24 h-auto rounded shadow cursor-pointer hover:scale-105 transition-transform" onclick="showPreview('downloads/nich-yaka-misyachna-full.pdf')">
-        <div>
-          <h4 class="text-lg font-semibold mb-2 text-[--primary]">Партитура (повна версія)</h4>
-          <div class="flex gap-4">
-            <a href="downloads/nich-yaka-misyachna-full.pdf" class="btn" download>Скачати PDF</a>
-            <button class="btn" onclick="showPDF('downloads/nich-yaka-misyachna-full.pdf')">Переглянути</button>
-          </div>
+    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8">
+      <img src="images/nich-full-thumbnail.jpg" alt="Мініатюра повної партитури" class="w-24 h-auto rounded shadow cursor-pointer hover:scale-105 transition-transform" onclick="showPreview('downloads/nich-yaka-misyachna-full.pdf')">
+      <div>
+        <h4 class="text-lg font-semibold mb-3 text-[--primary]">Партитура (повна версія)</h4>
+        <div class="flex gap-4 flex-wrap">
+          <a href="downloads/nich-yaka-misyachna-full.pdf" class="btn-outline" download>Скачати PDF</a>
+          <button class="btn-outline" onclick="showPDF('downloads/nich-yaka-misyachna-full.pdf')">Переглянути</button>
         </div>
       </div>
     </div>
 
     <!-- Item 2 -->
-    <div class="bg-white border border-[--accent] rounded-lg p-6 shadow-md flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
-      <div class="flex items-center gap-4">
-        <img src="images/nich-voice-thumbnail.jpg" alt="Мініатюра вокальної партії" class="w-24 h-auto rounded shadow cursor-pointer hover:scale-105 transition-transform" onclick="showPreview('downloads/nich-yaka-misyachna-voice.pdf')">
-        <div>
-          <h4 class="text-lg font-semibold mb-2 text-[--primary]">Вокальна партія</h4>
-          <div class="flex gap-4">
-            <a href="downloads/nich-yaka-misyachna-voice.pdf" class="btn" download>Скачати PDF</a>
-            <button class="btn" onclick="showPDF('downloads/nich-yaka-misyachna-voice.pdf')">Переглянути</button>
-          </div>
+    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8">
+      <img src="images/nich-voice-thumbnail.jpg" alt="Мініатюра вокальної партії" class="w-24 h-auto rounded shadow cursor-pointer hover:scale-105 transition-transform" onclick="showPreview('downloads/nich-yaka-misyachna-voice.pdf')">
+      <div>
+        <h4 class="text-lg font-semibold mb-3 text-[--primary]">Вокальна партія</h4>
+        <div class="flex gap-4 flex-wrap">
+          <a href="downloads/nich-yaka-misyachna-voice.pdf" class="btn-outline" download>Скачати PDF</a>
+          <button class="btn-outline" onclick="showPDF('downloads/nich-yaka-misyachna-voice.pdf')">Переглянути</button>
         </div>
       </div>
     </div>
 
   </div>
 
-  <!-- PDF viewer -->
+  <!-- PDF Viewer -->
   <div id="pdf-viewer" class="mt-10 hidden">
     <h4 class="text-xl font-bold mb-4 text-[--primary]">Перегляд партитури:</h4>
     <iframe id="pdf-frame" class="w-full h-[600px] border rounded-lg shadow" allowfullscreen></iframe>
