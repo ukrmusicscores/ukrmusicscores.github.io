@@ -316,17 +316,11 @@ footer .text-center {
 }
 
 .nich-footer {
-  width: 100%;
-  max-width: none;
-  margin: 0;
+  width: 100vw; /* вся ширина вікна браузера */
+  margin-left: calc(-1 * ((100vw - 100%) / 2)); /* компенсує автоцентрування */
   padding-left: 2rem;
   padding-right: 2rem;
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
-}
-@media (min-width: 768px) {
-  .nich-footer {
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
