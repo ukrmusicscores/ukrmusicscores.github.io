@@ -224,7 +224,6 @@ footer .text-center {
 
 .prose {
   max-width: 70ch; /* ширина блоку тексту */
-  margin: 0 auto;   /* вирівнювання по центру */
   padding: 2rem 1.5rem;
   font-size: 1.125rem; /* трохи більший шрифт */
   line-height: 1.9;
