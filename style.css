@@ -315,10 +315,18 @@ footer .text-center {
   box-shadow: 0 4px 10px rgba(112, 130, 56, 0.2); /* тінь */
 }
 
-footer.page-nich .container {
-  max-width: none;
+.nich-footer {
   width: 100%;
+  max-width: none;
   margin: 0;
   padding-left: 2rem;
   padding-right: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  .nich-footer {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
