@@ -293,3 +293,22 @@ footer .text-center {
   height: 100%;
   border: none;
 }
+
+.btn-outline {
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--primary);
+  border-radius: 9999px;
+  background-color: transparent;
+  color: var(--primary);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-outline:hover {
+  background-color: var(--primary);
+  color: white;
+}
