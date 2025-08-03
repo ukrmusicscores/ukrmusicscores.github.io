@@ -266,11 +266,11 @@ footer .text-center {
 
 .video-container {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 aspect */
+  padding-bottom: 56.25%; /* 16:9 пропорція */
   height: 0;
   overflow: hidden;
   border-radius: 0.5rem;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 2rem;
 }
 .video-container iframe {
