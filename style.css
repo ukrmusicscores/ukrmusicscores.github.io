@@ -308,10 +308,9 @@ footer .text-center {
   transition: all 0.3s ease;
   position: relative;
 }
-
 .btn-outline:hover {
   background-color: var(--primary);
   color: white;
   transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(112, 130, 56, 0.2); /* легка тінь */
+  box-shadow: 0 4px 10px rgba(112, 130, 56, 0.2); /* тінь */
 }
