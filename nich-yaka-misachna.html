@@ -205,17 +205,17 @@ Hiч яка мiсячна, зоряна, ясная,
     <div class="text-center text-xs text-gray-500 pt-6 pb-2">&copy; 2025 UkrChoralScores. Всі права захищено.</div>
   </footer>
 
-      <script>
-  function showPDF(file) {
-    const frame = document.getElementById('pdf-frame');
-    const viewer = document.getElementById('pdf-viewer');
-    frame.src = file;
-    viewer.classList.remove('hidden');
-    frame.scrollIntoView({ behavior: "smooth" });
+<script>
+  function showPDF(pdfUrl) {
+    const viewer = document.getElementById("pdf-viewer");
+    const frame = document.getElementById("pdf-frame");
+    frame.src = pdfUrl;
+    viewer.classList.remove("hidden");
+    viewer.scrollIntoView({ behavior: "smooth" });
   }
 
-  function showPreview(file) {
-    window.open(file, '_blank');
+  function showPreview(pdfUrl) {
+    showPDF(pdfUrl);
   }
 </script>
       
